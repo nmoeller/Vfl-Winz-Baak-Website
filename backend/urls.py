@@ -6,7 +6,7 @@ from .views import HomeView
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin', admin.site.urls),
     url(r'^articles/', include('apps.articles.urls')),
     url('.*$', HomeView.as_view(), name="home"),
     url(r'^tinymce/', include('tinymce.urls'))
