@@ -1,0 +1,108 @@
+#about {
+    background: #e4e4e4;
+    padding: 100px 0px;
+}
+
+#contact {
+    background: black;
+    padding: 100px 0px;
+}
+
+#training {
+    background: white;
+    padding: 100px 0px;
+}
+
+#myNavbar > a.active {
+    background: white;
+    color: black;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.blue {
+    max-width: 50px;
+    border-width: 3px;
+    border-top: solid #428bca;
+
+}
+
+.light {
+    max-width: 50px;
+    border-width: 3px;
+    border-top: solid white;
+
+}
+
+
+
+body,
+html {
+    height: 100%;
+    color: black;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3,
+.bgimg-4 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+
+.bgimg-1 {
+    background-image: url('http://www.ltv-lippstadt-tt.de/wp-content/uploads/2015/10/076A3660.jpg');
+    min-height: 1200px;
+}
+
+/* Second image (Portfolio) */
+
+.bgimg-2 {
+    background-image: url("/static/images/slider1.png");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+
+.bgimg-3 {
+    background-image: url("/static/images/slider3.png");
+    min-height: 400px;
+}
+
+.bgimg-4 {
+    background-image: url("/static/images/slider2.png");
+    min-height: 400px;
+}
+
+.w3-wide {
+    letter-spacing: 10px;
+}
+
+.w3-hover-opacity {
+    cursor: pointer;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: scroll;
+    }
+}

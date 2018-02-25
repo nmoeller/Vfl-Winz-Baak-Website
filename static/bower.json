@@ -1,0 +1,23 @@
+{
+  "name": "static",
+  "homepage": "https://github.com/NilsSchlueter/DjangoAngularJSTemplate",
+  "authors": [
+    "Nils Schlüter <github@nilsschlueter.de>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.6.6",
+    "angular": "^1.6.6",
+    "aos": "^2.2.0"
+  }
+}
