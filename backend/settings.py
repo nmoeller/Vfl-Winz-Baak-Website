@@ -39,8 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "rest_framework",
     "compressor",
-    "tinymce",
-    "apps.articles"
+    'ckeditor',
+    'ckeditor_uploader',
+    "apps.articles",
+    "apps.teams"
 ]
 
 MIDDLEWARE = [
@@ -139,3 +141,20 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #EMAIL_HOST_PASSWORD = ''
 #DEFAULT_FROM_EMAIL = ''
 #DEFAULT_TO_EMAIL = ''
+
+
+####################################
+#  CKEDITOR CONFIGURATION
+####################################
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+
+CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = "pillow"
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None,
+    },
+}

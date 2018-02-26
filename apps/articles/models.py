@@ -1,12 +1,12 @@
 from django.db import models
-from tinymce.models import HTMLField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Article(models.Model):
 
     title = models.CharField(max_length=200)
-    content = HTMLField()
-    img = models.ImageField(blank=True, null=True, upload_to="static/img/article_imgs")
+    content = RichTextUploadingField()
+    img = models.ImageField(blank=True, null=True, upload_to="static/media/uploads/article_imgs")
 
     def __str__(self):
         return self.title
