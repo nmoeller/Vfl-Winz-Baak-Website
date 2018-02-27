@@ -17,6 +17,8 @@
                 controller: "NewsController",
                 controllerAs: "ctrl",
                 templateUrl: "/static/html/news.html"
+            }).when('/training', {
+                templateUrl: "/static/html/training.html"
             })
             .otherwise("/home")
 
