@@ -1,0 +1,9 @@
+/teams/all
+/teams/id/<id>
+/teams/id/<id>/players
+
+/players/all
+/players/id/<id>
+
+/articles/all
+/articles/id/<id>
