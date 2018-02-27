@@ -38,7 +38,7 @@
 <div class="w3-top
             w3-animate-opacity">
     <div class="w3-bar " id="myNavbar">
-        <a class="w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"  title="Toggle Navigation Menu">
+        <a class="w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" title="Toggle Navigation Menu">
             <div id="bars" onclick="myFunction2(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -51,9 +51,8 @@
       </a>
         <a href="#home" class="w3-bar-item w3-hover-black w3-button">VFL Winz Baak Tischtennis</a>
 
-
-        <a href="#gallery" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-picture-o"></i> Gallerie</a>
         <a href="#contact" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-envelope-o"></i> Kontakt</a>
+        <a href="#gallery" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-picture-o"></i> Gallerie</a>
         <a href="#training" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-clock-o"></i> Trainingszeiten</a>
         <a href="#contact" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-users"></i> Mannschaften</a>
         <a href="#news" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-newspaper-o"></i> News</a>
@@ -70,6 +69,7 @@
         <a href="#news" du-smooth-scroll duration="2000" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-newspaper-o"></i> News</a>
         <a href="#training" du-smooth-scroll duration="2000" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-users"></i> Mannschaften</a>
         <a href="#training" du-smooth-scroll duration="2000" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-clock-o"></i> Trainingszeiten</a>
+        <a href="#contact" du-smooth-scroll duration="2000" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-picture-o"></i> Gallerie</a>
         <a href="#contact" du-smooth-scroll duration="2000" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-envelope-o"></i> Kontakt</a>
 
     </div>
@@ -79,11 +79,11 @@
     window.onscroll = function() {
         myFunction()
     };
-    
+
     function myFunction2(x) {
-    x.classList.toggle("change");
+        
         toggleFunction()
-}
+    }
 
     function myFunction() {
         var navbar = document.getElementById("myNavbar");
@@ -98,9 +98,14 @@
     function toggleFunction() {
         var x = document.getElementById("navDemo");
         if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show change";
+             var z = document.getElementById("bars");
+            z.classList.toggle("change");
+            x.className += " w3-show ";
         } else {
-            x.className = x.className.replace(" w3-show change", "");
+            x.className = x.className.replace(" w3-show ", "");
+            var z = document.getElementById("bars");
+            z.classList.toggle("change");
+            
         }
     }
 </script>
