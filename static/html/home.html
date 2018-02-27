@@ -1,7 +1,7 @@
 <!-- First Parallax Image with Logo Text -->
 
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-    <div class="w3-display-middle w3-animate-opacity"  style="white-space:nowrap;text-align:center;color:white">
+    <div class="w3-display-middle w3-animate-opacity" style="white-space:nowrap;text-align:center;color:white">
         <h1 class="w3-center w3-padding-large w3-xlarge w3-xxxlarge">VFL Winz Baak</h1>
         <hr class="blue" style="margin:auto">
         <p><img src="/static/images/s5_logo.png"></p><button href="#first" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Über uns</button>
@@ -16,59 +16,46 @@
         <h1 class="section-heading">News</h1>
         <hr class="blue" style="margin:auto">
 
+        <div class="w3-row" ng-show="$index % 3 == 0" ng-repeat="article in articles | limitTo : 4">
+            <div class="w3-col l4">
+                <div class="w3-card-4 w3-white w3-margin " data-aos="zoom-in-up" style="height:480px">
+                    <div style="height:400px">
+                        <img ng-if="articles[$index].img" src="{{articles[$index].img}}" style="width:100%">
+                        <div class="w3-container w3-center" style="height:200px">
+                            <h2>{{articles[$index].title}}</h2>
+                        </div>
+                    </div>
+                    <button class="w3-button w3-circle w3-black ">more</button>
 
-        <div class="w3-row">
-            <div class="w3-col l4">
-                <div class="w3-card-4 w3-white w3-margin " data-aos="zoom-in-up">
-                    <img src="img_fjords.jpg" alt="Norway">
-                    <div class="w3-container w3-center">
-                        <p>The Troll's tongue in Hardanger, Norway</p>
-                    </div>
                 </div>
             </div>
             <div class="w3-col l4">
-                <div class="w3-card-4 w3-white w3-margin" data-aos="zoom-in-up">
-                    <img src="img_fjords.jpg" alt="Norway">
-                    <div class="w3-container w3-center">
-                        <p>The Troll's tongue in Hardanger, Norway</p>
+                <div class="w3-card-4 w3-white w3-margin " data-aos="zoom-in-up" style="height:480px">
+                    <div style="height:400px">
+                        <img ng-if="articles[$index+1].img" src="{{articles[$index+1].img}}" style="width:100%">
+                        <div class="w3-container w3-center" style="height:200px">
+                            <h2>{{articles[$index+1].title}}</h2>
+                        </div>
                     </div>
+                    <button class="w3-button w3-circle w3-black">more</button>
+
                 </div>
             </div>
             <div class="w3-col l4">
-                <div class="w3-card-4 w3-white w3-margin" data-aos="zoom-in-up">
-                    <img src="img_fjords.jpg" alt="Norway">
-                    <div class="w3-container w3-center">
-                        <p>The Troll's tongue in Hardanger, Norway</p>
+                <div class="w3-card-4 w3-white w3-margin " data-aos="zoom-in-up" style="height:480px">
+                    <div style="height:400px">
+                        <img ng-if="articles[$index+2].img" src="{{articles[$index+2].img}}" style="width:100%">
+                        <div class="w3-container w3-center">
+                            <h2>{{articles[$index+2].title}}</h2>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="w3-row">
-            <div class="w3-col l4">
-                <div class="w3-card-4 w3-white w3-margin" data-aos="zoom-in-up">
-                    <img src="img_fjords.jpg" alt="Norway">
-                    <div class="w3-container w3-center">
-                        <p>The Troll's tongue in Hardanger, Norway</p>
-                    </div>
-                </div>
-            </div>
-            <div class="w3-col l4">
-                <div class="w3-card-4 w3-white w3-margin" data-aos="zoom-in-up">
-                    <img src="img_fjords.jpg" alt="Norway">
-                    <div class="w3-container w3-center">
-                        <p>The Troll's tongue in Hardanger, Norway</p>
-                    </div>
-                </div>
-            </div>
-            <div class="w3-col l4">
-                <div class="w3-card-4 w3-white w3-margin" data-aos="zoom-in-up">
-                    <img src="img_fjords.jpg" alt="Norway">
-                    <div class="w3-container w3-center">
-                        <p>The Troll's tongue in Hardanger, Norway</p>
-                    </div>
+                    <button class="w3-button w3-circle w3-black ">more</button>
+
                 </div>
             </div>
         </div>
+
+
         <div style="text-align:center" class="row"><button href="/teams" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Ältere Nachrichten</button></div>
 
 
@@ -163,41 +150,13 @@
 <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
     <div class="w3-display-middle">
-        <span class="w3-xxlarge w3-text-white w3-wide">KONTAKT</span>
-    </div>
-</div>
-
-
-<div class=" w3-container w3-padding-64 w3-center w3-center w3-black w3-padding-64 w3-opacity " id="contact">
-
-    <div class="w3-content w3-text-white">
-        <h1 style="color:white" class="section-heading">So kannst du Kontakt mit uns aufnehmen</h1>
-        <hr class="light" style="margin:auto">
-        <div class="w3-row">
-            <p class="lead2">Hier kannst du uns Fragen zu allem stellen, was du willst!<br>Schick uns einfach eine Mail oder ruf uns an und wir versuchen so schnell wie möglich zu Antworten!</p>
-        </div>
-        <div class="w3-row">
-            <div class="w3-col l6 foo" data-aos="zoom-in-up"><i class="fa fa-phone fa-3x w3-text-white "></i>
-                <p>01578 2326155</p>
-            </div>
-            <div class="w3-col l6 bar" data-aos="zoom-in-up"><i class="fa fa-envelope-o fa-3x w3-text-white "></i>
-                <p>nico.moeller@rub.de</p>
-            </div>
-        </div>
-    </div>
-
-    <div style="text-align:center" class="row"><a href="/contact" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Contact us</a></div>
-
-</div>
-<div class="bgimg-4 w3-display-container w3-opacity-min">
-    <div class="w3-display-middle">
-        <span class="w3-xxlarge w3-text-white w3-wide">Gallerie</span>
+        <span class="w3-xxlarge w3-text-white w3-wide">GALLERIE</span>
     </div>
 </div>
 
 <div class="w3-content w3-container w3-padding-64" id="gallery">
-    <h1  class="section-heading">Hier findest du ein paar Fotos aus unserem Vereinsleben</h1>
-        <hr class="blue" style="margin:auto">
+    <h1 class="section-heading">Hier findest du ein paar Fotos aus unserem Vereinsleben</h1>
+    <hr class="blue" style="margin:auto">
 
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="w3-row-padding w3-center w3-section">
@@ -234,10 +193,40 @@
         <div class="w3-col m3" data-aos="zoom-in-up">
             <img src="https://www.w3schools.com/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
         </div>
-        
+
     </div>
     <div style="text-align:center" class="row"><a href="/contact" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Show more</a></div>
 </div>
+
+<div class="bgimg-4 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">KONTAKT</span>
+    </div>
+</div>
+<div class=" w3-container w3-padding-64 w3-center w3-center  w3-padding-64  " id="contact">
+
+    <div class="w3-content">
+        <h1 class="section-heading">So kannst du Kontakt mit uns aufnehmen</h1>
+        <hr class="blue" style="margin:auto">
+        <div class="w3-row">
+            <p class="lead2">Hier kannst du uns Fragen zu allem stellen, was du willst!<br>Schick uns einfach eine Mail oder ruf uns an und wir versuchen so schnell wie möglich zu Antworten!</p>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col l6 foo" data-aos="zoom-in-up"><i class="fa fa-phone fa-3x w3-text-blue "></i>
+                <p>01578 2326155</p>
+            </div>
+            <div class="w3-col l6 bar" data-aos="zoom-in-up"><i class="fa fa-envelope-o fa-3x w3-text-blue "></i>
+                <p>nico.moeller@rub.de</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align:center" class="row"><a href="/contact" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Contact us</a></div>
+
+</div>
+
+
+
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal " onclick="this.style.display='none'">
@@ -247,6 +236,3 @@
         <p id="caption" class="w3-opacity w3-large"></p>
     </div>
 </div>
-
-
-
