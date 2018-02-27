@@ -13,10 +13,10 @@
                 controller: "HomepageController",
                 controllerAs: "ctrl",
                 templateUrl: "/static/html/home.html"
-            }).when('/paralax', {
-                controller: "HomepageController",
+            }).when('/news', {
+                controller: "NewsController",
                 controllerAs: "ctrl",
-                templateUrl: "/static/html/paralax.html"
+                templateUrl: "/static/html/news.html"
             })
             .otherwise("/home")
 

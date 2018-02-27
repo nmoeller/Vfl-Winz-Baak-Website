@@ -16,47 +16,28 @@
         <h1 class="section-heading">News</h1>
         <hr class="blue" style="margin:auto">
 
-        <div class="w3-row" ng-show="$index % 3 == 0" ng-repeat="article in articles | limitTo : 1">
-            <div class="w3-col l4">
+        <div class="w3-row">
+            <div class="w3-col l4" ng-repeat="article in articles | orderBy : id : true | limitTo : 3 ">
                 <div class="w3-card-4 w3-white w3-margin " data-aos="zoom-in-up" style="height:480px">
                     <div style="height:400px">
-                        <img ng-if="articles[$index].img" src="static/media/{{articles[$index].img}}" style="width:100%" onclick="onClick(this)">
+                        <img class="w3-hover-shadow" ng-if="article.img" src="static/media/{{article.img}}" style="width:100%;cursor:pointer" onclick="onClick(this)">
                         <div class="w3-container w3-center" style="height:200px">
-                            <h2>{{articles[$index].title}}</h2>
+                            <h2>{{article.title}}</h2>
                         </div>
                     </div>
-                    <button class="w3-button w3-circle w3-black ">more</button>
+                    <button class="w3-button w3-circle w3-blue ">more</button>
 
                 </div>
             </div>
-            <div class="w3-col l4">
-                <div class="w3-card-4 w3-white w3-margin " data-aos="zoom-in-up" style="height:480px">
-                    <div style="height:400px">
-                        <img ng-if="articles[$index+1].img" src="static/media/{{articles[$index+1].img}}" style="width:100%" onclick="onClick(this)">
-                        <div class="w3-container w3-center" style="height:200px">
-                            <h2>{{articles[$index+1].title}}</h2>
-                        </div>
-                    </div>
-                    <button class="w3-button w3-circle w3-black">more</button>
 
-                </div>
-            </div>
-            <div class="w3-col l4">
-                <div class="w3-card-4 w3-white w3-margin " data-aos="zoom-in-up" style="height:480px">
-                    <div style="height:400px">
-                        <img ng-if="articles[$index+2].img" src="static/media/{{articles[$index+2].img}}" style="width:100%" onclick="onClick(this)">
-                        <div class="w3-container w3-center">
-                            <h2>{{articles[$index+2].title}}</h2>
-                        </div>
-                    </div>
-                    <button class="w3-button w3-circle w3-black ">more</button>
-
-                </div>
-            </div>
         </div>
 
 
-        <div style="text-align:center" class="row"><button href="/teams" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Ältere Nachrichten</button></div>
+        <div style="text-align:center" class="row">
+            <a href="/#!/news">
+            <button class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Ältere Nachrichten</button>
+            </a>
+        </div>
 
 
 
@@ -93,16 +74,16 @@
 
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
     <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">14+</span><br> Partners
+        <img class="sponsor" src="/static/images/sparkasse.png" onclick="onClick(this)">
     </div>
     <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">55+</span><br> Projects Done
+        <img class="sponsor" src="/static/images/butterfly.png" onclick="onClick(this)">
     </div>
     <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">89+</span><br> Happy Clients
+        <img class="sponsor" src="/static/images/hwg.png" onclick="onClick(this)">
     </div>
     <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">150+</span><br> Meetings
+        <img class="sponsor" src="/static/images/sparkasse.png" onclick="onClick(this)">
     </div>
 </div>
 
@@ -160,37 +141,37 @@
 
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="w3-row-padding w3-center w3-section">
-        <div class="w3-col m3" data-aos="zoom-in-up">
+        <div class="w3-col m3" data-aos="zoom-in-right">
             <img src="https://www.w3schools.com/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
         </div>
 
-        <div class="w3-col m3" data-aos="zoom-in-up">
+        <div class="w3-col m3" data-aos="zoom-in-right">
             <img src="https://www.w3schools.com/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
         </div>
 
-        <div class="w3-col m3" data-aos="zoom-in-up">
+        <div class="w3-col m3" data-aos="zoom-in-left">
             <img src="https://www.w3schools.com/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
         </div>
 
-        <div class="w3-col m3" data-aos="zoom-in-up">
+        <div class="w3-col m3" data-aos="zoom-in-left">
             <img src="https://www.w3schools.com/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
         </div>
     </div>
 
     <div class="w3-row-padding w3-center w3-section">
-        <div class="w3-col m3" data-aos="zoom-in-up">
+        <div class="w3-col m3" data-aos="zoom-in-right">
             <img src="https://www.w3schools.com/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
         </div>
 
-        <div class="w3-col m3" data-aos="zoom-in-up">
+        <div class="w3-col m3" data-aos="zoom-in-right">
             <img src="https://www.w3schools.com/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
         </div>
 
-        <div class="w3-col m3" data-aos="zoom-in-up">
+        <div class="w3-col m3" data-aos="zoom-in-left">
             <img src="https://www.w3schools.com/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
         </div>
 
-        <div class="w3-col m3" data-aos="zoom-in-up">
+        <div class="w3-col m3" data-aos="zoom-in-left">
             <img src="https://www.w3schools.com/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
         </div>
 
@@ -230,7 +211,7 @@
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal " onclick="this.style.display='none'">
-    <span class="w3-button w3-large  w3-display-bottomright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
         <img id="img01" class="w3-image">
         <p id="caption" class="w3-opacity w3-large"></p>

@@ -10,13 +10,13 @@
     function HomepageController($scope, $http) {
 
         var self = this;
+        $scope.sitePage = false;
 
-        self.welcomeText = "Website mit Django und AngularJS"
 
         $http.get("/articles/all")
             .then(function (response) {
                 $scope.articles = response.data;
-            console.log($scope.articles)
+                console.log($scope.articles)
             });
 
     }

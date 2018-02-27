@@ -37,9 +37,9 @@
 <!-- Navbar (sit on top)-->
 <div class="w3-top
             w3-animate-opacity">
-    <div class="w3-bar " id="myNavbar">
+    <div class="w3-bar w3-black" id="myNavbar">
         <a class="w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" title="Toggle Navigation Menu">
-            <div id="bars" onclick="myFunction2(this)">
+            <div id="bars" onclick="toggleFunction()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -75,22 +75,16 @@
     </div>
 </div>
 <script>
-    // Change style of navbar on scroll
     window.onscroll = function() {
-        myFunction()
+        adjustMenu();
     };
 
-    function myFunction2(x) {
-        
-        toggleFunction()
-    }
-
-    function myFunction() {
+    function adjustMenu() {
         var navbar = document.getElementById("myNavbar");
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-black";
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ) {
+            navbar.className = "w3-bar" + " w3-card"+ " w3-animate-top"  + " w3-black";
         } else {
-            navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-black", "");
+            navbar.className = navbar.className.replace("w3-card w3-animate-top ", "");
         }
     }
 
@@ -98,14 +92,14 @@
     function toggleFunction() {
         var x = document.getElementById("navDemo");
         if (x.className.indexOf("w3-show") == -1) {
-             var z = document.getElementById("bars");
+            var z = document.getElementById("bars");
             z.classList.toggle("change");
             x.className += " w3-show ";
         } else {
             x.className = x.className.replace(" w3-show ", "");
             var z = document.getElementById("bars");
             z.classList.toggle("change");
-            
+
         }
     }
 </script>

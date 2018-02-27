@@ -1,0 +1,45 @@
+<!-- Container (About Section) -->
+<div class=" w3-container w3-padding-64 w3-center" >
+    <div class="w3-content" data-aos="zoom-in-up">
+
+
+        <h1 class="section-heading">News</h1>
+        <hr class="blue" style="margin:auto">
+
+      
+            <div class="container-1">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input ng-model="search" type="search" id="search" placeholder="Search..." />
+            </div>
+  
+
+        <div class="flex-container wrap">
+            <div ng-repeat="article in articles| orderBy : id : true | filter : search">
+                <div class=" w3-card-4 w3-white w3-margin article" data-aos="zoom-in-up" style="height:480px;width:290px">
+                    <div style="height:400px">
+                        <img class="w3-hover-shadow" ng-if="article.img" src="static/media/{{article.img}}" style="width:100%;cursor:pointer" onclick="onClick(this)">
+                        <div class="w3-container w3-center" style="height:200px">
+                            <h2>{{article.title}}</h2>
+                        </div>
+                    </div>
+                    <button class="w3-button w3-circle w3-blue ">more</button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+</div>
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal " onclick="this.style.display='none'">
+
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+</div>
