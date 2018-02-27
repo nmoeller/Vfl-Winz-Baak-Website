@@ -16,11 +16,11 @@
         <h1 class="section-heading">News</h1>
         <hr class="blue" style="margin:auto">
 
-        <div class="w3-row" ng-show="$index % 3 == 0" ng-repeat="article in articles | limitTo : 4">
+        <div class="w3-row" ng-show="$index % 3 == 0" ng-repeat="article in articles | limitTo : 1">
             <div class="w3-col l4">
                 <div class="w3-card-4 w3-white w3-margin " data-aos="zoom-in-up" style="height:480px">
                     <div style="height:400px">
-                        <img ng-if="articles[$index].img" src="{{articles[$index].img}}" style="width:100%">
+                        <img ng-if="articles[$index].img" src="static/media/{{articles[$index].img}}" style="width:100%" onclick="onClick(this)">
                         <div class="w3-container w3-center" style="height:200px">
                             <h2>{{articles[$index].title}}</h2>
                         </div>
@@ -32,7 +32,7 @@
             <div class="w3-col l4">
                 <div class="w3-card-4 w3-white w3-margin " data-aos="zoom-in-up" style="height:480px">
                     <div style="height:400px">
-                        <img ng-if="articles[$index+1].img" src="{{articles[$index+1].img}}" style="width:100%">
+                        <img ng-if="articles[$index+1].img" src="static/media/{{articles[$index+1].img}}" style="width:100%" onclick="onClick(this)">
                         <div class="w3-container w3-center" style="height:200px">
                             <h2>{{articles[$index+1].title}}</h2>
                         </div>
@@ -44,7 +44,7 @@
             <div class="w3-col l4">
                 <div class="w3-card-4 w3-white w3-margin " data-aos="zoom-in-up" style="height:480px">
                     <div style="height:400px">
-                        <img ng-if="articles[$index+2].img" src="{{articles[$index+2].img}}" style="width:100%">
+                        <img ng-if="articles[$index+2].img" src="static/media/{{articles[$index+2].img}}" style="width:100%" onclick="onClick(this)">
                         <div class="w3-container w3-center">
                             <h2>{{articles[$index+2].title}}</h2>
                         </div>
