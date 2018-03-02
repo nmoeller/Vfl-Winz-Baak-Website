@@ -11,7 +11,7 @@
 
         var self = this;
 
-        $scope.sitePage = true;
+        $scope.mainMenu = false;
 
         var navbar = document.getElementById("myNavbar");
         navbar.className = "w3-bar" + " w3-card" + " w3-black";

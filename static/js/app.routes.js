@@ -17,6 +17,10 @@
                 controller: "NewsController",
                 controllerAs: "ctrl",
                 templateUrl: "/static/html/news.html"
+            }).when('/article', {
+                controller: "ArticleController",
+                controllerAs: "ctrl",
+                templateUrl: "/static/html/article.html"
             }).when('/training', {
                 templateUrl: "/static/html/training.html"
             })

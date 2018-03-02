@@ -3,19 +3,40 @@
     padding: 100px 0px;
 }
 
-#contact {
-    background: white;
+.grey {
+    background: #e4e4e4;
     padding: 100px 0px;
 }
 
-#training {
-    background: white;
+#contact {
+        background: #222;
     padding: 100px 0px;
+    color: #fff;
+}
+
+#training {
+    background: #e4e4e4;
+    padding: 100px 64px;
+}
+.dark {
+    background: #222;
+    padding: 100px 0px;
+    color: #fff;
 }
 
 #myNavbar > a.active {
     background: white;
     color: black;
+}
+
+.w3-button {
+    font-weight: 700;
+}
+
+.lead {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 21px !important;
 }
 
 body,
@@ -26,6 +47,7 @@ h4,
 h5,
 h6 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 }
 
 .blue {
@@ -41,8 +63,9 @@ h6 {
     border-top: solid white;
 
 }
-.sponsor{
-        height: 120px;
+
+.sponsor {
+    height: 120px;
 }
 
 
@@ -101,6 +124,4 @@ html {
 
 /* Turn off parallax scrolling for tablets and phones */
 
-@media only screen and (max-device-width: 1024px) {
-
-}
+@media only screen and (max-device-width: 1024px) {}

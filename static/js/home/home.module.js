@@ -4,7 +4,8 @@
     angular
         .module('website.homepage', [
             'website.homepage.controllers',
-            'website.news.controllers'
+            'website.news.controllers',
+        'website.article.controllers'
         ]);
 
     angular
@@ -12,5 +13,8 @@
 
     angular
         .module('website.news.controllers', [])
+
+    angular
+        .module('website.article.controllers', [])
 
 })();

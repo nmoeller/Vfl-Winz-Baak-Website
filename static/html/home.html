@@ -10,13 +10,13 @@
 
 <!-- Container (About Section) -->
 <div class=" w3-container w3-padding-64 w3-center" id="news">
-    <div class="w3-content" data-aos="zoom-in-up">
+    <div class="w3-content" >
 
 
         <h1 class="section-heading">News</h1>
         <hr class="blue" style="margin:auto">
 
-        <div class="w3-row">
+        <div class="w3-row" data-aos="zoom-in" data-aos-delay="200">
             <div class="w3-col l4" ng-repeat="article in articles | orderBy : id : true | limitTo : 3 ">
                 <div class="w3-card-4 w3-white w3-margin " data-aos="zoom-in-up" style="height:480px">
                     <div style="height:400px">
@@ -25,7 +25,9 @@
                             <h2>{{article.title}}</h2>
                         </div>
                     </div>
+                    <a href="/#!/article?id={{article.id}}">
                     <button class="w3-button w3-circle w3-blue ">more</button>
+                    </a>
 
                 </div>
             </div>
@@ -102,23 +104,23 @@
     <h1 class="section-heading">Das sind unsere Trainingszeiten</h1>
     <hr class="blue" style="margin:auto">
 
-    <div class="w3-row w3-margins">
-        <div data-aos="zoom-in-up" style="margin-bottom: 60px;" class="w3-col l3"><i class="fa fa-4x fa-check w3-text-blue"></i>
+    <div class="w3-row w3-margins" >
+        <div data-aos="zoom-in" data-aos-delay="200" style="margin-bottom: 60px;" class="w3-col l3"><i class="fa fa-4x fa-check w3-text-blue"></i>
             <h3>Montag<br>17:00-22:00 Uhr</h3>
             <p class="text-muted">ab 17:00 Jugendtraining<br>ab 19:00 Herrentraining</p>
             <p>Regerstraße 59a<br>44879 Hattingen</p>
         </div>
-        <div data-aos="zoom-in-up" style="margin-bottom: 90px;" class="w3-col l3"><i class="fa fa-4x fa-check w3-text-blue"></i>
+        <div data-aos="zoom-in" data-aos-delay="200" style="margin-bottom: 90px;" class="w3-col l3"><i class="fa fa-4x fa-child w3-text-blue"></i>
             <h3>Dienstag<br>17:30-20:00 Uhr</h3>
             <p class="text-muted">Jugendtraining</p>
             <p>Regerstraße 59a<br>44879 Hattingen</p>
         </div>
-        <div data-aos="zoom-in-up" style="margin-bottom: 60px;" class="w3-col l3"><i class="fa fa-4x fa-check w3-text-blue"></i>
+        <div data-aos="zoom-in" data-aos-delay="200" style="margin-bottom: 60px;" class="w3-col l3"><i class="fa fa-4x fa-check w3-text-blue"></i>
             <h3>Donnerstag<br>17:00-22:00 Uhr</h3>
             <p class="text-muted">ab 17:00 Jugendtraining<br>ab 19:00 Herrentraining</p>
             <p>Regerstraße 59a<br>44879 Hattingen</p>
         </div>
-        <div data-aos="zoom-in-up" style="margin-bottom: 60px;" class="w3-col l3"><i class="fa fa-4x fa-check w3-text-blue"></i>
+        <div data-aos="zoom-in" data-aos-delay="200" style="margin-bottom: 60px;" class="w3-col l3"><i class="fa fa-4x fa-check w3-text-blue"></i>
             <h3>Freitag<br>17:00-22:00 Uhr</h3>
             <p class="text-muted">Freies Training</p>
             <p>Rauendahl 59a<br>44879 Hattingen</p>
@@ -126,6 +128,33 @@
     </div>
     <p></p>
     <div style="text-align:center" class="row"><a href="/#!/training" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Erfahre mehr über das Training</a></div>
+</div>
+
+<div class="bgimg-4 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">KONTAKT</span>
+    </div>
+</div>
+<div class=" w3-container w3-padding-64 w3-center w3-center  w3-padding-64  dark" id="contact">
+
+    <div class="w3-content w3-padding-32 ">
+        <h1 class="section-heading">So kannst du Kontakt mit uns aufnehmen</h1>
+        <hr class="light" style="margin:auto">
+        <div class="w3-row">
+            <p class="lead2">Hier kannst du uns Fragen zu allem stellen, was du willst!<br>Schick uns einfach eine Mail oder ruf uns an und wir versuchen so schnell wie möglich zu Antworten!</p>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col l6 foo" data-aos="zoom-in" data-aos-delay="200"><i class="fa fa-phone fa-3x w3-text-white "></i>
+                <p>01578 2326155</p>
+            </div>
+            <div class="w3-col l6 bar" data-aos="zoom-in" data-aos-delay="200"><i class="fa fa-envelope-o fa-3x w3-text-white "></i>
+                <p>nico.moeller@rub.de</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align:center" class="row"><a href="/contact" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Contact us</a></div>
+
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
@@ -140,71 +169,48 @@
     <hr class="blue" style="margin:auto">
 
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-    <div class="w3-row-padding w3-center w3-section">
-        <div class="w3-col m3" data-aos="zoom-in-right">
+    <div ata-aos="zoom-in" data-aos-delay="200">
+    <div class="w3-row-padding w3-center w3-section w3-padding-16">
+        <div class="w3-col m3">
             <img src="https://www.w3schools.com/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
         </div>
 
-        <div class="w3-col m3" data-aos="zoom-in-right">
+        <div class="w3-col m3" >
             <img src="https://www.w3schools.com/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
         </div>
 
-        <div class="w3-col m3" data-aos="zoom-in-left">
+        <div class="w3-col m3" >
             <img src="https://www.w3schools.com/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
         </div>
 
-        <div class="w3-col m3" data-aos="zoom-in-left">
+        <div class="w3-col m3" >
             <img src="https://www.w3schools.com/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
         </div>
     </div>
 
-    <div class="w3-row-padding w3-center w3-section">
-        <div class="w3-col m3" data-aos="zoom-in-right">
+    <div class="w3-row-padding w3-center w3-section w3-padding-16">
+        <div class="w3-col m3" >
             <img src="https://www.w3schools.com/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
         </div>
 
-        <div class="w3-col m3" data-aos="zoom-in-right">
+        <div class="w3-col m3" >
             <img src="https://www.w3schools.com/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
         </div>
 
-        <div class="w3-col m3" data-aos="zoom-in-left">
+        <div class="w3-col m3" >
             <img src="https://www.w3schools.com/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
         </div>
 
-        <div class="w3-col m3" data-aos="zoom-in-left">
+        <div class="w3-col m3">
             <img src="https://www.w3schools.com/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
         </div>
 
     </div>
+        </div>
     <div style="text-align:center" class="row"><a href="/contact" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Show more</a></div>
 </div>
 
-<div class="bgimg-4 w3-display-container w3-opacity-min">
-    <div class="w3-display-middle">
-        <span class="w3-xxlarge w3-text-white w3-wide">KONTAKT</span>
-    </div>
-</div>
-<div class=" w3-container w3-padding-64 w3-center w3-center  w3-padding-64  " id="contact">
 
-    <div class="w3-content">
-        <h1 class="section-heading">So kannst du Kontakt mit uns aufnehmen</h1>
-        <hr class="blue" style="margin:auto">
-        <div class="w3-row">
-            <p class="lead2">Hier kannst du uns Fragen zu allem stellen, was du willst!<br>Schick uns einfach eine Mail oder ruf uns an und wir versuchen so schnell wie möglich zu Antworten!</p>
-        </div>
-        <div class="w3-row">
-            <div class="w3-col l6 foo" data-aos="zoom-in-up"><i class="fa fa-phone fa-3x w3-text-blue "></i>
-                <p>01578 2326155</p>
-            </div>
-            <div class="w3-col l6 bar" data-aos="zoom-in-up"><i class="fa fa-envelope-o fa-3x w3-text-blue "></i>
-                <p>nico.moeller@rub.de</p>
-            </div>
-        </div>
-    </div>
-
-    <div style="text-align:center" class="row"><a href="/contact" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Contact us</a></div>
-
-</div>
 
 
 

@@ -10,7 +10,7 @@
     function HomepageController($scope, $http) {
 
         var self = this;
-        $scope.sitePage = false;
+        $scope.mainMenu = true;
 
 
         $http.get("/articles/all")
