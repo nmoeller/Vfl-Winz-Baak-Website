@@ -5,6 +5,7 @@ class Team(models.Model):
 
     name = models.CharField(max_length=200)
     league = models.CharField(max_length=200)
+    link = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
@@ -14,7 +15,9 @@ class Player(models.Model):
 
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
-    position = models.IntegerField()
+    positionMan = models.IntegerField(blank=True, null=True)
+    positionYouth = models.IntegerField(blank=True, null=True)
+    img = models.ImageField(blank=True, null=True, upload_to="player_imgs")
 
     team = models.ManyToManyField("Team")
 
