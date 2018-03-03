@@ -1,6 +1,6 @@
-#about {
+#aboutUs {
     background: #e4e4e4;
-    padding: 100px 0px;
+   
 }
 
 .grey {
@@ -15,8 +15,8 @@
 }
 
 #training {
-    background: #e4e4e4;
-    padding: 100px 64px;
+    background: white;
+    padding: 50px 64px;
 }
 .dark {
     background: #222;

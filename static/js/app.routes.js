@@ -21,6 +21,10 @@
                 controller: "ArticleController",
                 controllerAs: "ctrl",
                 templateUrl: "/static/html/article.html"
+            }).when('/teams', {
+                controller: "TeamsController",
+                controllerAs: "ctrl",
+                templateUrl: "/static/html/teams.html"
             }).when('/training', {
                 templateUrl: "/static/html/training.html"
             })
