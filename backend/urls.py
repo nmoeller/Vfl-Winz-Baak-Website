@@ -8,6 +8,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('admin', admin.site.urls),
     url(r'^articles/', include('apps.articles.urls')),
+    url(r'^marquee/', include('apps.marquee.urls')),
     url(r'^teams/', include('apps.teams.urls_teams')),
     url(r'^players/', include('apps.teams.urls_players')),
     url('.*$', HomeView.as_view(), name="home"),
