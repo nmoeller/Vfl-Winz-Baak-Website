@@ -11,18 +11,34 @@
 
         var self = this;
 
-        $scope.mainMenu = false;
-
-        var navbar = document.getElementById("myNavbar");
-        navbar.className = "w3-bar" + " w3-card" + " w3-black";
-
-        $http.get("/articles/all")
+        $http.get("/teams/all")
             .then(function (response) {
-                $scope.articles = response.data;
-                console.log($scope.articles)
+                $scope.teams = response.data;
+                console.log($scope.teams)
             });
 
+        $http.get("/players/all")
+            .then(function (response) {
+                $scope.players = response.data;
+                console.log($scope.players)
+            });
+
+
     }
+
+    angular
+        .module('website.teams.controllers').filter('position', function ($filter) {
+            return function (player,group) {
+                if (group.includes("Herren")) {
+                    var result = $filter("orderBy")(player, "positionMan");
+                    return result;
+                } else {
+                    var result = $filter("orderBy")(player, "positionYouth");
+                    return result;
+                }
+
+            }
+        });
 
 
 })();

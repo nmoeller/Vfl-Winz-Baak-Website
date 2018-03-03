@@ -5,8 +5,8 @@ from django.http import HttpResponse, JsonResponse
 
 
 def get_latest_marquee(request):
-    marquees = Marquee.objects.all().order_by('-id').values()
-    serializer = MarqueeSerializer(marquees, many=True)
+    marquees = Marquee.objects.last()
+    serializer = MarqueeSerializer(marquees, many=False)
     return JsonResponse(serializer.data, safe=False)
 
 

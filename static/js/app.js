@@ -4,7 +4,6 @@
     var app = angular
         .module("website", [
             'website.routes',
-            'website.config',
             'website.homepage',
             'duScroll'
             
@@ -13,8 +12,7 @@
     angular
         .module("website.routes", ['ngRoute']);
 
-    angular
-        .module("website.config", []);
+
 
     angular
         .module("website")

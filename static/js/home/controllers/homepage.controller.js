@@ -10,8 +10,6 @@
     function HomepageController($scope, $http) {
 
         var self = this;
-        $scope.mainMenu = true;
-
 
         $http.get("/articles/all")
             .then(function (response) {

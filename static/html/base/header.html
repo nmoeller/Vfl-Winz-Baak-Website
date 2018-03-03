@@ -1,41 +1,5 @@
-<!--
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
-      <a class="navbar-brand" href="#">
-        <img src="/static/images/s5_logo.png">    
-    </a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Page 1</a></li>
-        <li><a href="#">Page 2</a></li> 
-        <li><a href="#">Page 3</a></li> 
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
 <!-- Navbar (sit on top)-->
-<div class="w3-top
+<div ng-controller="MenuController as vm" class="w3-top
             w3-animate-opacity">
     <div class="w3-bar w3-black" id="myNavbar">
         <a class="w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" title="Toggle Navigation Menu">
@@ -50,13 +14,14 @@
         <img src="/static/images/s5_logo.png">    
       </a>
         <a href="#home" class="w3-bar-item w3-hover-black w3-button">VFL Winz Baak Tischtennis</a>
-        
-        <a href="#contact" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-envelope-o"></i> Kontakt</a>
-        <a href="#training" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-clock-o"></i> Trainingszeiten</a>
-        <a href="#!/teams"  class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-users"></i> Mannschaften</a>
-        <a href="#aboutUs" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-user-circle-o"></i> Über uns</a>
-        <a href="#news" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-newspaper-o"></i> News</a>
+
+        <a href="#contact" ng-show="mainMenu" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-envelope-o"></i> Kontakt</a>
+        <a href="#training" ng-show="mainMenu" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-clock-o"></i> Trainingszeiten</a>
+        <a href="#!/teams" ng-show="mainMenu" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-users"></i> Mannschaften</a>
+        <a href="#aboutUs" ng-show="mainMenu" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-user-circle-o"></i> Über uns</a>
+        <a href="#news" ng-show="mainMenu" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-newspaper-o"></i> News</a>
         <a href="#home" du-smooth-scroll duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-home"></i> Home</a>
+
 
 
 
@@ -73,7 +38,11 @@
         <a href="#contact" du-smooth-scroll duration="2000" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-envelope-o"></i> Kontakt</a>
 
     </div>
+
+
 </div>
+
+
 
 <script>
     window.onscroll = function() {
@@ -82,8 +51,8 @@
 
     function adjustMenu() {
         var navbar = document.getElementById("myNavbar");
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ) {
-            navbar.className = "w3-bar" + " w3-card"+ " w3-animate-top"  + " w3-black";
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-black";
         } else {
             navbar.className = navbar.className.replace("w3-card w3-animate-top ", "");
         }

@@ -6,7 +6,8 @@
             'website.homepage.controllers',
             'website.news.controllers',
         'website.article.controllers',
-        'website.teams.controllers'
+        'website.teams.controllers',
+        'website.menu.controllers'
         ]);
 
     angular
@@ -20,5 +21,8 @@
 
     angular
         .module('website.teams.controllers', [])
+    
+    angular
+        .module('website.menu.controllers', [])
 
 })();
