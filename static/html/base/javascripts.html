@@ -1,10 +1,37 @@
-{% load compress %} {% load staticfiles %} {% compress js %}
+{% load compress %}
 
-<!-- bower components -->
-<script type="text/javascript" src="{% static 'bower_components/angular/angular.js' %}"></script>
-<script type="text/javascript" src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
-<script type="text/javascript" src="{% static 'bower_components/angular-scroll/angular-scroll.min.js' %}"></script>
-<script src="static/bower_components/aos/dist/aos.js"></script>
+{% load staticfiles %}
+{% compress js %}
+
+    <!-- bower components -->
+    <script type="text/javascript" src="{% static 'bower_components/angular/angular.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/angular-scroll/angular-scroll.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/aos/dist/aos.js' %}"></script>
+
+
+    <!-- NON-ANGULAR -->
+    <!-- APP -->
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/app.routes.js' %}"></script>
+
+
+    <!-- MODULES -->
+    <script type="text/javascript" src="{% static 'js/home/home.module.js' %}"></script>
+
+    <!-- SERVICES -->
+
+    <!-- CONTROLLER -->
+    <script type="text/javascript" src="{% static 'js/home/controllers/homepage.controller.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/home/controllers/news.controller.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/home/controllers/article.controller.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/home/controllers/teams.controller.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/home/controllers/menu.controller.js' %}"></script>
+
+
+
+{% endcompress %}
+
 <script>
     AOS.init();
 </script>
@@ -18,29 +45,3 @@
     }
 </script>
 
-
-
-
-
-
-<!-- NON-ANGULAR -->
-<!-- APP -->
-<script src="{% static 'js/app.js' %}"></script>
-<script src="{% static 'js/app.routes.js' %}"></script>
-
-
-<!-- MODULES -->
-<script type="text/javascript" src="{% static 'js/home/home.module.js' %}"></script>
-
-<!-- SERVICES -->
-
-<!-- CONTROLLER -->
-<script type="text/javascript" src="{% static 'js/home/controllers/homepage.controller.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/home/controllers/news.controller.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/home/controllers/article.controller.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/home/controllers/teams.controller.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/home/controllers/menu.controller.js' %}"></script>
-
-
-
-{% endcompress %}
