@@ -17,6 +17,12 @@
                 console.log($scope.articles)
             });
 
+        $http.get("/marquee/latest")
+            .then(function (response) {
+                $scope.marquee = response.data.text;
+                console.log($scope.marquee)
+            });
+
     }
 
 

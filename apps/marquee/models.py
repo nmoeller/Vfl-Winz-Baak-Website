@@ -4,7 +4,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 class Marquee(models.Model):
 
-    text = RichTextUploadingField()
+    text = models.CharField(max_length=200)
     
 
     def __str__(self):

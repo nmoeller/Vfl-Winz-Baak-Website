@@ -25,11 +25,7 @@
 
         });
 
-        $http.get("/marquee/latest")
-            .then(function (response) {
-                $scope.marquee = response.data;
-                console.log($scope.marquee)
-            });
+
 
         $http.get("/teams/all")
             .then(function (response) {

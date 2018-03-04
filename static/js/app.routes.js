@@ -27,6 +27,8 @@
                 templateUrl: "/static/html/teams.html"
             }).when('/training', {
                 templateUrl: "/static/html/training.html"
+            }).when('/aboutUs', {
+                templateUrl: "/static/html/about.html"
             })
             .otherwise("/home")
 
