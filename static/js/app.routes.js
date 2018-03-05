@@ -29,6 +29,10 @@
                 templateUrl: "/static/html/training.html"
             }).when('/aboutUs', {
                 templateUrl: "/static/html/about.html"
+            }).when('/impressum', {
+                templateUrl: "/static/html/impressum.html"
+            }).when('/contact', {
+                templateUrl: "/static/html/contact.html"
             })
             .otherwise("/home")
 
