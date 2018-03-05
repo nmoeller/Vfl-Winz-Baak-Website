@@ -29,7 +29,7 @@
     angular
         .module('website.teams.controllers').filter('position', function ($filter) {
             return function (player,group) {
-                if (group.includes("Herren")) {
+                if (group.indexOf("Herren")) {
                     var result = $filter("orderBy")(player, "positionMan");
                     return result;
                 } else {

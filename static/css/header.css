@@ -30,3 +30,9 @@
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
+
+@media only screen and (max-width: 1024px) {
+    .imgonsmall {
+        width: 50px !important;
+    }
+}
