@@ -2,8 +2,7 @@ from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 from django.views.decorators.http import require_http_methods
 import json
-from backend import settings
-
+from backend.settings import prod
 
 @require_http_methods(["POST"])
 def send_form_email(request):
@@ -18,7 +17,8 @@ def send_form_email(request):
         return HttpResponse(status=422)
 
     try:
-        send_mail(subject, message + "\n\nfrom: " + name, from_email, [settings.EMAIL_HOST_USER])
+        print("Sending mail..")
+        send_mail(subject, message + "\n\nfrom: " + name, from_email, [prod.EMAIL_HOST_USER])
     except BadHeaderError:
         return HttpResponse(status=500)
 

@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     "apps.articles",
     "apps.marquee",
-    "apps.teams"
+    "apps.teams",
+    "apps.send_email"
 ]
 
 MIDDLEWARE = [

@@ -5,13 +5,13 @@
         .module("website", [
             'website.routes',
             'website.homepage',
+            'website.contact',
             'duScroll'
             
         ]);
 
     angular
         .module("website.routes", ['ngRoute']);
-
 
 
     angular

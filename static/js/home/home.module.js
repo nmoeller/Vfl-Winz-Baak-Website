@@ -5,9 +5,9 @@
         .module('website.homepage', [
             'website.homepage.controllers',
             'website.news.controllers',
-        'website.article.controllers',
-        'website.teams.controllers',
-        'website.menu.controllers'
+            'website.article.controllers',
+            'website.teams.controllers',
+            'website.menu.controllers'
         ]);
 
     angular

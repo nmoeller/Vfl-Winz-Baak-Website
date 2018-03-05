@@ -31,32 +31,32 @@
         <div class="w3-row w3-margins">
 
 
-            <form action="email/send" method="post" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin w3-padding" enctype="application/json">
+            <form id="contact-form" ng-submit="ctrl.submitForm()" name="contactForm" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin w3-padding">
 
 
 
                 <div class="w3-row w3-section">
                     <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
                     <div class="w3-rest">
-                        <input class="w3-input w3-border" name="name" type="text" placeholder="Name">
+                        <input class="w3-input w3-border" name="name" type="text" placeholder="Name" ng-model="name">
                     </div>
                 </div>
 
                 <div class="w3-row w3-section">
                     <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
                     <div class="w3-rest">
-                        <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+                        <input class="w3-input w3-border" name="email" type="text" placeholder="Email" ng-model="email">
                     </div>
                 </div>
 
                 <div class="w3-row w3-section">
                     <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
                     <div class="w3-rest">
-                        <textarea rows="4" class="w3-input w3-border" name="text" type="text" placeholder="Message"></textarea>
+                        <textarea rows="4" class="w3-input w3-border" name="text" type="text" placeholder="Message" ng-model="text"></textarea>
                     </div>
                 </div>
                 <div class="w3-center">
-                    <button class=" w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Send</button>
+                    <button class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue" type="submit">Send</button>
                 </div>
             </form>
 

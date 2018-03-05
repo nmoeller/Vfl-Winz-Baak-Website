@@ -32,7 +32,9 @@
             }).when('/impressum', {
                 templateUrl: "/static/html/impressum.html"
             }).when('/contact', {
-                templateUrl: "/static/html/contact.html"
+                templateUrl: "/static/html/contact.html",
+                controller: "ContactController",
+                controllerAs: "ctrl"
             })
             .otherwise("/home")
 

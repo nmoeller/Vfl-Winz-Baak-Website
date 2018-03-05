@@ -24,5 +24,5 @@ STATICFILES_FINDERS = (
 )
 COMPRESS_ROOT = os.path.join(BASE_DIR, "static/compressed")
 COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter',  'compressor.filters.cssmin.CSSMinFilter']
-COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = True
+COMPRESS_ENABLED = False
+COMPRESS_OFFLINE = False
