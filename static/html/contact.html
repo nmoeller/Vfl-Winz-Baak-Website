@@ -1,36 +1,67 @@
 <div class="w3-animate-opacity">
-<div class=" w3-container w3-padding-64 w3-center w3-center  w3-padding-64  dark" id="contact">
+    <div class=" w3-container w3-padding-64 w3-center w3-center  w3-padding-64  dark" id="contact">
 
-    <div class="w3-content w3-padding-32 ">
-        <h1 class="section-heading">So kannst du Kontakt mit uns aufnehmen</h1>
-        <hr class="light" style="margin:auto">
-        <div class="w3-row">
-            <p class="lead2">Hier kannst du uns Fragen zu allem stellen, was du willst!<br>Schick uns einfach eine Mail oder ruf uns an und wir versuchen so schnell wie möglich zu Antworten!</p>
-        </div>
-        <div class="w3-row">
-            <div class="w3-col l6 foo" data-aos="zoom-in" data-aos-delay="500"><i class="fa fa-phone fa-3x w3-text-white "></i>
-                <p>01578 2326155</p>
+        <div class="w3-content w3-padding-32 ">
+            <h1 class="section-heading">So kannst du Kontakt mit uns aufnehmen</h1>
+            <hr class="light" style="margin:auto">
+            <div class="w3-row">
+                <p class="lead2">Hier kannst du uns Fragen zu allem stellen, was du willst!<br>Schick uns einfach eine Mail oder ruf uns an und wir versuchen so schnell wie möglich zu Antworten!</p>
             </div>
-            <div class="w3-col l6 bar" data-aos="zoom-in" data-aos-delay="500"><i class="fa fa-envelope-o fa-3x w3-text-white "></i>
-                <p>nico.moeller@rub.de</p>
+            <div class="w3-row">
+                <div class="w3-col l6 foo" data-aos="zoom-in" data-aos-delay="500"><i class="fa fa-phone fa-3x w3-text-white "></i>
+                    <p>01578 2326155</p>
+                </div>
+                <div class="w3-col l6 bar" data-aos="zoom-in" data-aos-delay="500"><i class="fa fa-envelope-o fa-3x w3-text-white "></i>
+                    <p>nico.moeller@rub.de</p>
+                </div>
             </div>
         </div>
+
+        <div style="text-align:center" class="row"><a href="/contact" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Contact us</a></div>
+
     </div>
 
-    <div style="text-align:center" class="row"><a href="/contact" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Contact us</a></div>
-
-</div>
-    
-        <div class=" w3-container w3-padding-64 w3-center w3-content" >
+    <div class=" w3-container w3-padding-64  w3-content">
 
 
-        <h1 class="section-heading">Schreib uns einfach an</h1>
+        <h1 class=" w3-center section-heading">Schreib uns einfach an</h1>
         <hr class="blue" style="margin:auto" />
 
 
         <div class="w3-row w3-margins">
 
+
+            <form action="email/send" method="post" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin w3-padding" enctype="application/json">
+
+
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="name" type="text" placeholder="Name">
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+                    <div class="w3-rest">
+                        <textarea rows="4" class="w3-input w3-border" name="text" type="text" placeholder="Message"></textarea>
+                    </div>
+                </div>
+                <div class="w3-center">
+                    <button class=" w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Send</button>
+                </div>
+            </form>
+
+
         </div>
-        
+
     </div>
 </div>
