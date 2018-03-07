@@ -95,6 +95,13 @@ html {
     min-height: 1200px;
 }
 
+@media only screen and (max-width: 1024px) {
+   .bgimg-1 {
+    background-image: url('http://www.ltv-lippstadt-tt.de/wp-content/uploads/2015/10/076A3660.jpg');
+    min-height: 800px;
+}
+}
+
 /* Second image (Portfolio) */
 
 .bgimg-2 {
