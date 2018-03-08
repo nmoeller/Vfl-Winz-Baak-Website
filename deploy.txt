@@ -1,0 +1,11 @@
+1. Stop service: svc -d ~/service/gunicorn
+
+2. git pull
+
+3. Set settings to prod
+
+4. Run python manage.py collectstatic locally
+
+5. Copy files from local to /var/www/virtual/nmoeller/testsite.tt-vfl-winz-baak.de/static
+
+6. Run python manage.py compress on server
