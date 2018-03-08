@@ -1,0 +1,19 @@
+<div class="w3-animate-opacity">
+    <div class=" w3-container w3-padding-64 w3-center " id="second" style="background: #e4e4e4;    min-height: 800px;">
+        <div class="w3-content">
+        <img width="100%" src="static/media/{{article.img}}" style="max-width:500px">
+            </div>
+
+        <h1 class="section-heading">{{article.title}}</h1>
+        <hr class="blue" style="margin:auto" />
+
+
+        <div class="w3-row w3-margins w3-content">
+            <div ng-bind-html="safeContent">
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
