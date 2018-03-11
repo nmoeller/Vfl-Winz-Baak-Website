@@ -11,6 +11,13 @@ class Team(models.Model):
     def __str__(self):
         return self.name
 
+class Role(models.Model):
+
+    name = models.CharField(max_length=200)
+  
+    def __str__(self):
+        return self.name
+
 
 class Player(models.Model):
 
@@ -23,6 +30,8 @@ class Player(models.Model):
     img = models.ImageField(blank=True, null=True, upload_to="player_imgs")
 
     team = models.ManyToManyField("Team")
+    role = models.ManyToManyField("Role")
 
     def __str__(self):
         return self.last_name + ", " + self.first_name
+

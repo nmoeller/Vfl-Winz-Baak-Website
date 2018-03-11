@@ -25,6 +25,20 @@ def get_players_for_team(request, team_id):
     serializer = PlayerSerializer(players, many=True)
     return JsonResponse(serializer.data, safe=False)
 
+def get_ansprechpartner_players(request):
+
+    players = Player.objects.filter(ansprechpartner=True)
+
+    serializer = PlayerSerializer(players, many=True)
+    return JsonResponse(serializer.data, safe=False)
+
+def get_trainer_players(request):
+
+    players = Player.objects.filter(trainer=True)
+
+    serializer = PlayerSerializer(players, many=True)
+    return JsonResponse(serializer.data, safe=False)
+
 
 def get_all_players(request):
     players = Player.objects.all()

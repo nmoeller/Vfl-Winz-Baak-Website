@@ -1,11 +1,17 @@
 from rest_framework import serializers
-from .models import Team, Player
+from .models import Team, Player, Role
 
 
 class TeamSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Team
+        fields = "__all__"
+
+class RoleSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Role
         fields = "__all__"
 
 
