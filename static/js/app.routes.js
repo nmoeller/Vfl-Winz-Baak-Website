@@ -31,6 +31,8 @@
                 templateUrl: "/static/html/about.html"
             }).when('/impressum', {
                 templateUrl: "/static/html/impressum.html"
+            }).when('/sports', {
+                templateUrl: "/static/html/sportliches.html"
             }).when('/contact', {
                 templateUrl: "/static/html/contact.html",
                 controller: "ContactController",

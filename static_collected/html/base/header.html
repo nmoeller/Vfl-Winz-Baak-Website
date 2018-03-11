@@ -2,7 +2,7 @@
 <div ng-controller="MenuController as vm" class="w3-top
             w3-animate-opacity">
     <div class="w3-bar w3-black" id="myNavbar">
-        <a class="w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" title="Toggle Navigation Menu">
+        <a class=" w3-hide-large w3-right" href="javascript:void(0);" title="Toggle Navigation Menu">
             <div id="bars" onclick="toggleFunction()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -13,14 +13,14 @@
         <a class="w3-bar-item " href="#">
         <img class="imgonsmall" src="/static/images/s5_logo.png">    
       </a>
-        <a href="#home" class="w3-bar-item w3-hover-black w3-button">VFL Winz Baak Tischtennis</a>
+        <a href="/" class="w3-bar-item w3-hover-black w3-button">VfL Winz Baak Tischtennis</a>
 
-        <a href="#contact" ng-show="mainMenu" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-envelope-o"></i> Kontakt</a>
-        <a href="#training" ng-show="mainMenu" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-clock-o"></i> Trainingszeiten</a>
-        <a href="#!/teams" ng-show="mainMenu" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-users"></i> Mannschaften</a>
-        <a href="#aboutUs" ng-show="mainMenu" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-user-circle-o"></i> Über uns</a>
-        <a href="#news" ng-show="mainMenu" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-newspaper-o"></i> News</a>
-        <a href="#home" du-smooth-scroll duration="2000" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white"><i class="fa fa-home"></i> Home</a>
+        <a href="#contact" ng-show="mainMenu" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right w3-hover-white"><i class="fa fa-envelope-o"></i> Kontakt</a>
+        <a href="#training" ng-show="mainMenu" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right w3-hover-white"><i class="fa fa-clock-o"></i> Training</a>
+        <a href="#!/teams" ng-show="mainMenu" class="w3-bar-item w3-button w3-hide-medium w3-right w3-hide-small w3-hover-white"><i class="fa fa-users"></i> Mannschaften</a>
+        <a href="#aboutUs" ng-show="mainMenu" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-hide-small w3-button w3-hide-medium w3-right w3-hover-white"><i class="fa fa-user-circle-o"></i> Über uns</a>
+        <a href="#news" ng-show="mainMenu" du-smooth-scroll du-scrollspy duration="2000" class="w3-bar-item w3-hide-small w3-button w3-hide-medium w3-right w3-hover-white"><i class="fa fa-newspaper-o"></i> News</a>
+        <a href="#home" du-smooth-scroll duration="2000" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right w3-hover-white"><i class="fa fa-home"></i> Home</a>
 
 
 
@@ -29,12 +29,12 @@
     </div>
 
 
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-animate-top">
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large  w3-animate-top" style="z-index:-1;">
         <a href="#home" du-smooth-scroll duration="2000" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-home"></i> Home</a>
         <a href="#news" du-smooth-scroll duration="2000" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-newspaper-o"></i> News</a>
         <a href="#aboutUs" du-smooth-scroll duration="2000" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-user-circle-o"></i> Über uns</a>
         <a href="#!/teams" du-smooth-scroll duration="2000" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-users"></i> Mannschaften</a>
-        <a href="#training" du-smooth-scroll duration="2000" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-clock-o"></i> Trainingszeiten</a>
+        <a href="#training" du-smooth-scroll duration="2000" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-clock-o"></i> Training</a>
         <a href="#contact" du-smooth-scroll duration="2000" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-envelope-o"></i> Kontakt</a>
 
     </div>
