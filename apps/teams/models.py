@@ -18,6 +18,8 @@ class Player(models.Model):
     last_name = models.CharField(max_length=200)
     positionMan = models.IntegerField(blank=True, null=True)
     positionYouth = models.IntegerField(blank=True, null=True)
+    trainer= models.BooleanField(default=False)
+    ansprechpartner= models.BooleanField(default=False)
     img = models.ImageField(blank=True, null=True, upload_to="player_imgs")
 
     team = models.ManyToManyField("Team")
