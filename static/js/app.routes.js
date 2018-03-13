@@ -26,13 +26,17 @@
                 controllerAs: "ctrl",
                 templateUrl: "/static/html/teams.html"
             }).when('/training', {
-                templateUrl: "/static/html/training.html"
+                templateUrl: "/static/html/training.html",
+             controller: "TrainingsController",
+                controllerAs: "ctrl"
             }).when('/aboutUs', {
                 templateUrl: "/static/html/about.html"
             }).when('/impressum', {
                 templateUrl: "/static/html/impressum.html"
             }).when('/sports', {
-                templateUrl: "/static/html/sportliches.html"
+                templateUrl: "/static/html/sportliches.html",
+             controller: "SportsController",
+                controllerAs: "ctrl"
             }).when('/contact', {
                 templateUrl: "/static/html/contact.html",
                 controller: "ContactController",

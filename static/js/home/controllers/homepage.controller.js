@@ -22,6 +22,12 @@
                 $scope.marquee = response.data.text;
                 console.log($scope.marquee)
             });
+        
+               $http.get("/players/ansprechpartner")
+            .then(function (response) {
+                $scope.ansprechpartner= response.data;
+                console.log($scope.ansprechpartner)
+            });
 
     }
 

@@ -30,18 +30,27 @@
 
 
     <div class="w3-row w3-padding-48">
-        <div class="w3-col l3"><img class="profile" src="/static/images/placeholder.jpg" />
-            <p>Jens Neumeier</p>
+        <div ng-repeat="person in trainer | limitTo : 4" class="w3-col l3"><img class="profile" src="/static/media/{{person.Img}}" />
+            <p>{{person.first_name}} {{person.last_name}}</p>
+            <div class="w3-row">
+                        <div class="w3-col l6 foo" data-aos="zoom-in" data-aos-delay="500"><i class="fa fa-phone fa-3x w3-text-white "></i>
+                
+            </div>
+            <div class="w3-col l6">
+            <p>{{person.phone}}</p>
+            </div>
+                </div>
+            <div class="w3-row">
+            <div class="w3-col l6 bar" data-aos="zoom-in" data-aos-delay="500"><i class="fa fa-envelope-o fa-3x w3-text-white "></i>
+                  </div>
+                <div class="w3-col l6">
+            <p>{{person.email}}</p>
+            </div>
+          
+                
+                </div>
         </div>
-        <div class="w3-col l3"><img class="profile" src="/static/images/placeholder.jpg" />
-            <p>Andre Englemann</p>
-        </div>
-        <div class="w3-col l3"><img class="profile" src="/static/images/placeholder.jpg" />
-            <p>Daniel Krause</p>
-        </div>
-        <div class="w3-col l3"><img class="profile" src="/static/images/placeholder.jpg" />
-            <p>Daniel Krause</p>
-        </div>
+    
     </div>
 </div>
 </div>

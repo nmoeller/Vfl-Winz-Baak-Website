@@ -7,7 +7,9 @@
             'website.news.controllers',
             'website.article.controllers',
             'website.teams.controllers',
-            'website.menu.controllers'
+            'website.menu.controllers',
+            'website.sports.controllers',
+            'website.training.controllers'
         ]);
 
     angular
@@ -24,5 +26,11 @@
     
     angular
         .module('website.menu.controllers', [])
+    
+    angular
+        .module('website.sports.controllers', [])
+    
+    angular
+        .module('website.training.controllers', [])
 
 })();
