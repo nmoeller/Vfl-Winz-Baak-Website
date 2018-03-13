@@ -188,29 +188,32 @@ Mit Roboter- und Balleimertraining sowie von Videoanalysen bringen wir Euch das 
 <div class=" w3-container w3-padding-64 w3-center w3-center  w3-padding-64  dark" id="contact">
 <h1 class="section-heading">So kannst du Kontakt mit uns aufnehmen</h1>
         <hr class="light" style="margin:auto">
-    <div class="w3-row w3-padding-48">
-        <div ng-repeat="person in ansprechpartner | limitTo : 4" class="w3-col l3"><img width="80%" class="profile" src="/static/media/{{person.Img}}" />
-            <p>{{person.first_name}} {{person.last_name}}</p>
-            <div class="w3-row">
-                        <div class="w3-col l6 foo" data-aos="zoom-in" data-aos-delay="500"><i class="fa fa-phone fa-3x w3-text-white "></i>
-                
-            </div>
-            <div class="w3-col l6">
-            <p>{{person.phone}}</p>
-            </div>
+        <div class="w3-row w3-padding-48">
+            <div ng-repeat="person in ansprechpartner | limitTo : 4" class="w3-col l3">
+                <img class="w3-hover-shadow" ng-if="person.img" src="static/media/{{person.img}}" style="width:250px;cursor:pointer" onclick="onClick(this)">
+                <p>{{person.first_name}} {{person.last_name}}</p>
+                <div style="width:300px;margin: auto;font-size: 13px;" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="w3-row">
+                        <div class="w3-col l4 foo"><i class="fa fa-phone fa-3x w3-text-white "></i>
+
+                        </div>
+                        <div class="w3-col l7 ">
+                            <p >{{person.phone}}</p>
+                        </div>
+                    </div>
+                    <div class="w3-row">
+                        <div class="w3-col l4 bar" ><i class="fa fa-envelope-o fa-3x w3-text-white "></i>
+                        </div>
+                        <div class="w3-col l7 ">
+                            <p>{{person.email}}</p>
+                        </div>
+
+
+                    </div>
                 </div>
-            <div class="w3-row">
-            <div class="w3-col l6 bar" data-aos="zoom-in" data-aos-delay="500"><i class="fa fa-envelope-o fa-3x w3-text-white "></i>
-                  </div>
-                <div class="w3-col l6">
-            <p>{{person.email}}</p>
             </div>
-          
-                
-                </div>
+
         </div>
-    
-    </div>
 
     <div style="text-align:center" class="row"><a href="/#!/contact" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Contact us</a></div>
 

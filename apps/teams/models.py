@@ -31,8 +31,8 @@ class Player(models.Model):
     phone = models.CharField(max_length=200,blank=True,null=True)
     img = models.ImageField(blank=True, null=True, upload_to="player_imgs")
 
-    team = models.ManyToManyField("Team")
-    role = models.ManyToManyField("Role")
+    team = models.ManyToManyField("Team", blank=True)
+    role = models.ManyToManyField("Role", blank=True)
 
     def __str__(self):
         return self.last_name + ", " + self.first_name

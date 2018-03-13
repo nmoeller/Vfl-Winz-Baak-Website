@@ -4,7 +4,7 @@
         <h1 class="section-heading">Unsere Mannschaften</h1>
         <hr class="blue" style="margin:auto;margin-bottom:5px">
         <div ng-repeat="team in teams">
-            <button class="w3-btn w3-white w3-border w3-border-blue w3-round-large w3-margin" href="#mannschaft{{$index+1}}" du-smooth-scroll du-scrollspy duration="2000">
+            <button class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue" href="#mannschaft{{$index+1}}" du-smooth-scroll  duration="2000" style="margin:5px">
                 <a  style="text-decoration:none" >{{team.name}}</a>
                     </button>
         </div>
@@ -36,7 +36,8 @@
         <div style="text-align:center" class="row"><a href="{{team.link}}" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Tabelle</a></div>
 
     </div>
-</div>
+    </div>
+
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal " onclick="this.style.display='none'">
 

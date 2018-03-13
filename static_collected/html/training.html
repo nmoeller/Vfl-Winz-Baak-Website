@@ -1,52 +1,64 @@
 <div class="w3-animate-opacity">
-<div style="background: #e4e4e4;">
-    <div class=" w3-container w3-padding-64 w3-center w3-content" >
+    <div style="background: #e4e4e4;">
+        <div class=" w3-container w3-padding-64 w3-center w3-content">
 
 
-        <h1 class="section-heading">Unser Trainingsangebot an Euch</h1>
-        <hr class="blue" style="margin:auto" />
+            <h1 class="section-heading">Unser Trainingsangebot an Euch</h1>
+            <hr class="blue" style="margin:auto" />
 
 
-        <div class="w3-row w3-margins">
-            <h3 class="text-center">4 verschiedene Trainingstage zur Auswahl</h3>
-            <p style="text-align:center">Ihr könnt also trainieren, wenn es Euer Zeitplan hergibt.</p>
-            <h3 class="text-center">Freies Spielen</h3>
-            <p style="text-align:center">Der Dienstag ist ein Spieltag für alle, an denen das Erlernte geübt werden kann. Es ist kein angeleiteter Trainingstag mit Übungseinheiten, sondern "freies Spielen" für Jugend und Erwachsene.</p>
-            <h3 class="text-center">Kurze Wartezeiten</h3>
-            <p style="text-align:center">Bei vier möglichen Trainingstagen entzerrt sich unsere große Trainingsgruppe und Ihr müsst nur zu den absoluten Spitzenzeiten auf einen freien Trainingstisch warten.</p>
-            <h3 class="text-center">Verschiedene Trainingspartner</h3>
-            <p style="text-align:center">Viele verschiedene Trainingspartner aus allen Leistungsklassen. Wir haben derzeit 6 Nachwuchsteams und 5 Teams im Erwachsenenbereich. Da finden sich an jedem Trainingstag ausreichend Spielpartner.</p>
-            <h3 class="text-center">Große Trainingsgruppen</h3>
-            <p style="text-align:center">Gemeinsames Training in großen Gruppen. Alle Jugendlichen und alle Senioren bilden jeweils eine große Trainingsgruppe. Weitere Unterteilungen nach Leistungen, Mannschaften oder Alter gibt es bei uns grundsätzlich nicht. Das Nachwuchstraining wird natürlich von unserem Übungsleiterteam betreut und strukturiert, die Erwachsenen trainieren frei ohne Übungsleiter.</p>
-        </div>
-        <div style="text-align:center" class="row"><a target="_blank" href="/static/images/Anmeldung.pdf" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Aufnahmeformular</a></div>
-    </div>
-</div>
-<div class=" w3-container w3-padding-64 w3-center w3-grey w3-text-white ">
-
-
-    <h1 class="section-heading">Trainer</h1>
-    <hr class="light" style="margin:auto" />
-
-
-    <div class="w3-row w3-padding-48">
-        <div class="w3-col l3"><img class="profile" src="/static/images/placeholder.jpg" />
-            <p>Jens Neumeier</p>
-        </div>
-        <div class="w3-col l3"><img class="profile" src="/static/images/placeholder.jpg" />
-            <p>Andre Englemann</p>
-        </div>
-        <div class="w3-col l3"><img class="profile" src="/static/images/placeholder.jpg" />
-            <p>Daniel Krause</p>
-        </div>
-        <div class="w3-col l3"><img class="profile" src="/static/images/placeholder.jpg" />
-            <p>Daniel Krause</p>
+            <div class="w3-row w3-margins">
+                <h3 class="text-center">4 verschiedene Trainingstage zur Auswahl</h3>
+                <p style="text-align:center">Ihr könnt also trainieren, wenn es Euer Zeitplan hergibt.</p>
+                <h3 class="text-center">Freies Spielen</h3>
+                <p style="text-align:center">Der Dienstag ist ein Spieltag für alle, an denen das Erlernte geübt werden kann. Es ist kein angeleiteter Trainingstag mit Übungseinheiten, sondern "freies Spielen" für Jugend und Erwachsene.</p>
+                <h3 class="text-center">Kurze Wartezeiten</h3>
+                <p style="text-align:center">Bei vier möglichen Trainingstagen entzerrt sich unsere große Trainingsgruppe und Ihr müsst nur zu den absoluten Spitzenzeiten auf einen freien Trainingstisch warten.</p>
+                <h3 class="text-center">Verschiedene Trainingspartner</h3>
+                <p style="text-align:center">Viele verschiedene Trainingspartner aus allen Leistungsklassen. Wir haben derzeit 6 Nachwuchsteams und 5 Teams im Erwachsenenbereich. Da finden sich an jedem Trainingstag ausreichend Spielpartner.</p>
+                <h3 class="text-center">Große Trainingsgruppen</h3>
+                <p style="text-align:center">Gemeinsames Training in großen Gruppen. Alle Jugendlichen und alle Senioren bilden jeweils eine große Trainingsgruppe. Weitere Unterteilungen nach Leistungen, Mannschaften oder Alter gibt es bei uns grundsätzlich nicht. Das Nachwuchstraining wird natürlich von unserem Übungsleiterteam betreut und strukturiert, die Erwachsenen trainieren frei ohne Übungsleiter.</p>
+            </div>
+            <div style="text-align:center" class="row"><a target="_blank" href="/static/images/Anmeldung.pdf" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Aufnahmeformular</a></div>
         </div>
     </div>
-</div>
+    <div class=" w3-container w3-padding-64 w3-center w3-grey w3-text-white ">
+
+
+        <h1 class="section-heading">Trainer</h1>
+        <hr class="light" style="margin:auto" />
+
+
+               <div class="w3-row w3-padding-48">
+            <div ng-repeat="person in trainer | limitTo : 4" class="w3-col l3">
+                <img class="w3-hover-shadow" ng-if="person.img" src="static/media/{{person.img}}" style="width:250px;cursor:pointer" onclick="onClick(this)">
+                <p>{{person.first_name}} {{person.last_name}}</p>
+                <div style="width:300px;margin: auto;font-size: 13px;" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="w3-row">
+                        <div class="w3-col l4 foo"><i class="fa fa-phone fa-3x w3-text-white "></i>
+
+                        </div>
+                        <div class="w3-col l7 ">
+                            <p >{{person.phone}}</p>
+                        </div>
+                    </div>
+                    <div class="w3-row">
+                        <div class="w3-col l4 bar" ><i class="fa fa-envelope-o fa-3x w3-text-white "></i>
+                        </div>
+                        <div class="w3-col l7 ">
+                            <p>{{person.email}}</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 
-  
+
 <div style="background: #e4e4e4;">
     <div class=" w3-container w3-padding-64 w3-center  w3-text-black w3-content" id="second">
 
@@ -68,18 +80,18 @@
             <h3 class="text-center">Training mit den "Profis"</h3>
             <p style="text-align:center">Da nach dem Jugendtraining die Senioren trainieren, schnappt Ihr Euch kurz vor Ende einen von den "Großen" zu einem Trainingsspiel und schaut Euch noch schnell einige Tricks ab.|Wenn Ihr weit genug seid und schon mithalten könnt, seid Ihr natürlich auch herzlich eingeladen, einfach noch länger zu bleiben und bei den Großen mitzutrainieren.</p>
         </div>
-        
-    <div class="w3-row" style="width:400px;margin:auto">
-<div class="w3-col l6">
-            <div style="text-align:center" class="w3-margin"><a href="/#!/aboutUs" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Sportliches</a></div>
-</div>
-<div class="w3-col l6">
-            <div style="text-align:center" class="w3-margin"><a href="/#!/aboutUs" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Vereinsleben</a></div>
-</div>
-</div>
-</div>
 
- <div class=" w3-container w3-padding-64 w3-center w3-white">
+        <div class="w3-row" style="width:400px;margin:auto">
+            <div class="w3-col l6">
+                <div style="text-align:center" class="w3-margin"><a href="/#!/aboutUs" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Sportliches</a></div>
+            </div>
+            <div class="w3-col l6">
+                <div style="text-align:center" class="w3-margin"><a href="/#!/aboutUs" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Vereinsleben</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" w3-container w3-padding-64 w3-center w3-white">
 
 
 
@@ -92,7 +104,8 @@
                 <p class="text-muted">17:00-19:00 Uhr Jugend-/Schülertraining<br>19:00-22:00 Uhr Herrentraining</p>
                 <p>Regerstraße 31-33<br>45529 Hattingen</p>
             </div>
-            <div style="margin-bottom: 90px;" class="w3-col l3"><div data-aos="zoom-in" data-aos-delay="500" style="width:70px;margin: auto;" class=" w3-text-blue"><img alt="self-Logo" src="/static/images/racket.svg"></div>
+            <div style="margin-bottom: 90px;" class="w3-col l3">
+                <div data-aos="zoom-in" data-aos-delay="500" style="width:70px;margin: auto;" class=" w3-text-blue"><img alt="self-Logo" src="/static/images/racket.svg"></div>
                 <h3>Dienstag<br>17:30-20:00 Uhr</h3>
                 <p class="text-muted">Jugend / Herren / Schüler</p>
                 <p>Regerstraße 31-33<br>45529 Hattingen</p>
@@ -100,16 +113,16 @@
             <div style="margin-bottom: 60px;" class="w3-col l3"><i data-aos-delay="500" data-aos="zoom-in" class="fa fa-4x fa-check w3-text-blue"></i>
                 <h3>Donnerstag<br>16:00-22:00 Uhr</h3>
 
-                            <p class="text-muted">16:00-17:00 Uhr Einsteiger-Training<br>17:00-19:00 Uhr Jugend-/Schülertraining<br>19:00-22:00 Uhr Herrentraining</p>
+                <p class="text-muted">16:00-17:00 Uhr Einsteiger-Training<br>17:00-19:00 Uhr Jugend-/Schülertraining<br>19:00-22:00 Uhr Herrentraining</p>
                 <p>Regerstraße 31-33<br>45529 Hattingen</p>
             </div>
-            <div style="margin-bottom: 60px;" class="w3-col l3"><div data-aos="zoom-in" data-aos-delay="500" style="width:70px;margin: auto;" class=" w3-text-blue"><img alt="self-Logo" src="/static/images/racket.svg"></div>
+            <div style="margin-bottom: 60px;" class="w3-col l3">
+                <div data-aos="zoom-in" data-aos-delay="500" style="width:70px;margin: auto;" class=" w3-text-blue"><img alt="self-Logo" src="/static/images/racket.svg"></div>
                 <h3>Freitag<br>17:00-22:00 Uhr</h3>
                 <p class="text-muted">Jugend / Herren / Schüler</p>
                 <p>Rauendahlstraße 40-42<br>45529 Hattingen</p>
             </div>
         </div>
         <p></p>
-        <div style="text-align:center" class="row"><a href="/#!/training" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Erfahre mehr über das Training</a></div>
+       
     </div>
-
