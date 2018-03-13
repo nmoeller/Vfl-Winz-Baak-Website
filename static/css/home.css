@@ -1,6 +1,6 @@
 #aboutUs {
     background: #e4e4e4;
-   
+
 }
 
 .grey {
@@ -9,7 +9,7 @@
 }
 
 #contact {
-        background: #222;
+    background: #222;
     padding: 100px 0px;
     color: #fff;
 }
@@ -18,6 +18,7 @@
     background: white;
     padding: 50px 64px;
 }
+
 .dark {
     background: #222;
     padding: 100px 0px;
@@ -96,10 +97,10 @@ html {
 }
 
 @media only screen and (max-width: 1024px) {
-   .bgimg-1 {
-    background-image: url('http://www.ltv-lippstadt-tt.de/wp-content/uploads/2015/10/076A3660.jpg');
-    min-height: 800px;
-}
+    .bgimg-1 {
+        background-image: url('http://www.ltv-lippstadt-tt.de/wp-content/uploads/2015/10/076A3660.jpg');
+        min-height: 800px;
+    }
 }
 
 /* Second image (Portfolio) */
@@ -128,6 +129,45 @@ html {
 .w3-hover-opacity {
     cursor: pointer;
 }
+
+.sidenav {
+    position: fixed;
+    top: 20%;
+    left: 20px;
+}
+
+.sidenav a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    height: 80px;
+    font-size: 2em;
+    line-height: 80px;
+    color: #808080;
+    text-decoration: none
+}
+
+.sidenav ul
+{
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.sidenav li > a.active {
+    border-left: 3px solid #f00;
+    padding-left: 40px;
+    background: none;
+}
+
+.sidenav li > a:hover {
+    border-left: 3px solid #f00;
+    padding-left: 40px;
+    background: none;
+}
+
+
+
 
 /* Turn off parallax scrolling for tablets and phones */
 

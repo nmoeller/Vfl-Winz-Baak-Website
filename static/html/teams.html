@@ -1,25 +1,41 @@
 <div class="w3-animate-opacity" style="min-height:1200px">
-    <div class=" w3-container w3-padding-64 w3-center" >
-<a href="#mannschaft{{$index+1}}" du-smooth-scroll du-scrollspy duration="2000" ng-repeat="team in teams" >
-   {{team.name}}
-</a>
-        </div>
-    
-<div ng-repeat="team in teams" id="mannschaft{{$index+1}}" class=" w3-container w3-padding-64 w3-center " ng-class="($index%2==0) ? 'grey' : 'dark'">
 
-    <div class="w3-content w3-padding-16">
-        <h1 class="section-heading">{{team.name}}</h1>
-        <hr ng-class="($index%2==0) ? 'blue' : 'light'" style="margin:auto;margin-bottom:5px">
-        <img src="static/media/{{team.img}}" style="width:50%" onclick="onClick(this)">
-        <div ng-repeat="player in players | filter:team.name | position:team.name">
-            {{$index+1}}. {{player.first_name}} {{player.last_name}}
+    <div class=" w3-container w3-padding-64 w3-center w3-hide-large">
+        <h1 class="section-heading">Unsere Mannschaften</h1>
+        <hr class="blue" style="margin:auto;margin-bottom:5px">
+        <div ng-repeat="team in teams">
+            <button class="w3-btn w3-white w3-border w3-border-blue w3-round-large w3-margin" href="#mannschaft{{$index+1}}" du-smooth-scroll du-scrollspy duration="2000">
+                <a  style="text-decoration:none" >{{team.name}}</a>
+                    </button>
         </div>
 
     </div>
 
-    <div style="text-align:center" class="row"><a href="{{team.link}}" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Tabelle</a></div>
 
-</div>
+
+    <div class="sidenav w3-hide-small w3-hide-medium">
+        <ul>
+            <li ng-repeat="team in teams">
+                <a href="#mannschaft{{$index+1}}" du-smooth-scroll du-scrollspy duration="2000">{{team.name}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div ng-repeat="team in teams" id="mannschaft{{$index+1}}" class=" w3-container w3-padding-64 w3-center " ng-class="($index%2==0) ? 'grey' : 'dark'">
+
+        <div class="w3-content w3-padding-16">
+            <h1 class="section-heading">{{team.name}}</h1>
+            <hr ng-class="($index%2==0) ? 'blue' : 'light'" style="margin:auto;margin-bottom:5px">
+            <img src="static/media/{{team.img}}" style="width:50%" onclick="onClick(this)">
+            <div ng-repeat="player in players | filter:team.name | position:team.name">
+                {{$index+1}}. {{player.first_name}} {{player.last_name}}
+            </div>
+
+        </div>
+
+        <div style="text-align:center" class="row"><a href="{{team.link}}" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Tabelle</a></div>
+
+    </div>
 </div>
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal " onclick="this.style.display='none'">
