@@ -2,17 +2,24 @@ from .common import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['tt-vfl-winz-baak.de', "testsite.tt-vfl-winz-baak.de", "127.0.0.1"]
+ALLOWED_HOSTS = ['tt-vfl-winz-baak.de', "vfl-winz-baak.de", "127.0.0.1","tt.vfl-winz-baak.de"]
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+'compressor.finders.CompressorFinder')
+
 
 STATICFILES_DIRS = [
     "/var/www/virtual/nmoeller/testsite.tt-vfl-winz-baak.de/static/"
 ]
 
 # COMPRESSOR
-COMPRESS_ROOT =  "/var/www/virtual/nmoeller/testsite.tt-vfl-winz-baak.de/static/"
+COMPRESS_ROOT =  "/var/www/virtual/nmoeller/tt.vfl-winz-baak.de/static/"
 COMPRESS_ENABLED = True
 COMPRESS_OFFLINE = True
 
