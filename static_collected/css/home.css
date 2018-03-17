@@ -139,16 +139,17 @@ html {
 .sidenav a {
     position: relative;
     display: block;
-    padding: 10px 15px;
-    height: 80px;
-    font-size: 2em;
+    /* padding: 10px 15px; */
+    height: 60px;
+    /* font-size: 2em; */
     line-height: 80px;
     color: #808080;
-    text-decoration: none
+    text-decoration: none;
+    -webkit-transition: padding 0.25s;
+    transition: padding 0.25s;
 }
 
-.sidenav ul
-{
+.sidenav ul {
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
@@ -156,13 +157,13 @@ html {
 
 .sidenav li > a.active {
     border-left: 3px solid #f00;
-    padding-left: 40px;
+    padding-left: 20px;
     background: none;
 }
 
 .sidenav li > a:hover {
     border-left: 3px solid #f00;
-    padding-left: 40px;
+    padding-left: 20px;
     background: none;
 }
 

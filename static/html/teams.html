@@ -1,10 +1,130 @@
+<style>
+    table,
+    th,
+    td {
+        border: none;
+    }
+
+    table {
+        width: 100%;
+        display: table;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    table.striped tr {
+        border-bottom: none;
+    }
+
+    table.striped>tbody>tr:nth-child(odd) {
+        background-color: rgba(242, 242, 242, 0.5);
+    }
+
+    table.striped>tbody>tr>td {
+        border-radius: 0;
+    }
+
+    table.highlight>tbody>tr {
+        -webkit-transition: background-color .25s ease;
+        transition: background-color .25s ease;
+    }
+
+    table.highlight>tbody>tr:hover {
+        background-color: rgba(242, 242, 242, 0.5);
+    }
+
+    table.centered thead tr th,
+    table.centered tbody tr td {
+        text-align: center;
+    }
+
+    tr {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    td,
+    th {
+        padding: 15px 5px;
+        display: table-cell;
+        text-align: left;
+        vertical-align: middle;
+        border-radius: 2px;
+    }
+
+    @media only screen and (max-width: 992px) {
+        table.responsive-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            display: block;
+            position: relative;
+            /* sort out borders */
+        }
+        table.responsive-table td:empty:before {
+            content: '\00a0';
+        }
+        table.responsive-table th,
+        table.responsive-table td {
+            margin: 0;
+            vertical-align: top;
+        }
+        table.responsive-table th {
+            text-align: left;
+        }
+        table.responsive-table thead {
+            display: block;
+            float: left;
+        }
+        table.responsive-table thead tr {
+            display: block;
+            padding: 0 10px 0 0;
+        }
+        table.responsive-table thead tr th::before {
+            content: "\00a0";
+        }
+        table.responsive-table tbody {
+            display: block;
+            width: auto;
+            position: relative;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        table.responsive-table tbody tr {
+            display: inline-block;
+            vertical-align: top;
+        }
+        table.responsive-table th {
+            display: block;
+            text-align: right;
+        }
+        table.responsive-table td {
+            display: block;
+            min-height: 1.25em;
+            text-align: left;
+        }
+        table.responsive-table tr {
+            border-bottom: none;
+            padding: 0 10px;
+        }
+        table.responsive-table thead {
+            border: 0;
+            border-right: 1px solid rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    a {
+        color: #039be5;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+</style>
 <div class="w3-animate-opacity" style="min-height:1200px">
 
     <div class=" w3-container w3-padding-64 w3-center w3-hide-medium w3-hide-large">
         <h1 class="section-heading">Unsere Mannschaften</h1>
         <hr class="blue" style="margin:auto;margin-bottom:5px">
         <div ng-repeat="team in teams">
-            <button class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue" href="#mannschaft{{$index+1}}" du-smooth-scroll  duration="2000" style="margin:5px">
+            <button class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue" href="#mannschaft{{$index+1}}" du-smooth-scroll duration="2000" style="margin:5px">
                 <a  style="text-decoration:none" >{{team.name}}</a>
                     </button>
         </div>
@@ -36,7 +156,7 @@
         <div style="text-align:center" class="row"><a href="{{team.link}}" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Tabelle</a></div>
 
     </div>
-    </div>
+</div>
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal " onclick="this.style.display='none'">

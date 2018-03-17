@@ -33,6 +33,8 @@
                 templateUrl: "/static/html/about.html"
             }).when('/impressum', {
                 templateUrl: "/static/html/impressum.html"
+            }).when('/calendar', {
+                templateUrl: "/static/html/calendar.html"
             }).when('/sports', {
                 templateUrl: "/static/html/sportliches.html",
              controller: "SportsController",
