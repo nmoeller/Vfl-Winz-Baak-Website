@@ -14,7 +14,12 @@
         $http.get("/teams/all")
             .then(function (response) {
                 $scope.teams = response.data;
-                console.log($scope.teams)
+                
+            for(var team in $scope.teams)
+                {
+                    getTable(team)
+                }
+
             });
 
         $http.get("/players/all")
@@ -22,6 +27,15 @@
                 $scope.players = response.data;
                 console.log($scope.players)
             });
+        
+        function getTable(team)
+        {
+            $http.get("/webtt/html/tabelle_"+$scope.teams[team].name+".html")
+            .then(function (response) {
+                $scope.teams[team].tabelle = response;
+                console.log($scope.teams)
+        })}
+                  
 
 
     }

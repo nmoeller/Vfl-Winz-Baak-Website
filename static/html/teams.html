@@ -112,7 +112,7 @@
         }
     }
 
-    a {
+    table a {
         color: #039be5;
         text-decoration: none;
         -webkit-tap-highlight-color: transparent;
@@ -122,7 +122,7 @@
 
     <div class=" w3-container w3-padding-64 w3-center w3-hide-medium w3-hide-large">
         <h1 class="section-heading">Unsere Mannschaften</h1>
-        <hr class="blue" style="margin:auto;margin-bottom:5px">
+        <hr class="blue" style="margin:auto;margin-bottom:20px">
         <div ng-repeat="team in teams">
             <button class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue" href="#mannschaft{{$index+1}}" du-smooth-scroll duration="2000" style="margin:5px">
                 <a  style="text-decoration:none" >{{team.name}}</a>
@@ -147,9 +147,26 @@
             <h1 class="section-heading">{{team.name}}</h1>
             <hr ng-class="($index%2==0) ? 'blue' : 'light'" style="margin:auto;margin-bottom:5px">
             <img src="static/media/{{team.img}}" style="width:50%" onclick="onClick(this)">
-            <div ng-repeat="player in players | filter:team.name | position:team.name">
-                {{$index+1}}. {{player.first_name}} {{player.last_name}}
-            </div>
+            <div class="w3-row">
+                <div class="w3-col l6">
+                    <h2>Aufstellung</h2>
+                    <hr ng-class="($index%2==0) ? 'blue' : 'light'" style="margin:auto;margin-bottom:5px">
+            <table>
+            <tr> <th>Position</th><th>Vorname</th><th>Nachname</th>
+                
+                </tr>
+           
+            <tr ng-repeat="player in players | filter:team.name | position:team.name">
+                <td>{{$index+1}}.</td>
+                <td>{{player.first_name}} </td>
+                <td> {{player.last_name}}</td>
+            </tr> 
+                 </table>
+                    </div>
+                 <div class="w3-col l6">
+                     
+                </div>
+                </div>
 
         </div>
 
