@@ -15,7 +15,7 @@ STATICFILES_FINDERS = (
 
 
 STATICFILES_DIRS = [
-    "/var/www/virtual/nmoeller/testsite.tt-vfl-winz-baak.de/static/"
+    "/var/www/virtual/nmoeller/tt.vfl-winz-baak.de/static/"
 ]
 
 # COMPRESSOR
