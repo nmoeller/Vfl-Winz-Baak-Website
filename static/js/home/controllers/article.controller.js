@@ -11,7 +11,7 @@
 
         var self = this;
         $scope.mainMenu = false;
-        var articleId = $routeParams.id - 1;
+        var articleId = $routeParams.id ;
 
         $http.get("/articles/id/"+articleId)
             .then(function (response) {
