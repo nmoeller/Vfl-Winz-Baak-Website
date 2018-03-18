@@ -122,7 +122,7 @@
 
     <div class=" w3-container w3-padding-64 w3-center w3-hide-medium w3-hide-large">
         <h1 class="section-heading">Unsere Mannschaften</h1>
-        <hr class="blue" style="margin:auto;margin-bottom:20px">
+        <hr class="blue" style="margin:auto;margin-bottom:5px">
         <div ng-repeat="team in teams">
             <button class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue" href="#mannschaft{{$index+1}}" du-smooth-scroll duration="2000" style="margin:5px">
                 <a  style="text-decoration:none" >{{team.name}}</a>
@@ -145,7 +145,7 @@
 
         <div class="w3-content w3-padding-16">
             <h1 class="section-heading">{{team.name}}</h1>
-            <hr ng-class="($index%2==0) ? 'blue' : 'light'" style="margin:auto;margin-bottom:5px">
+            <hr ng-class="($index%2==0) ? 'blue' : 'light'" style="margin:auto;margin-bottom:20px">
             <img src="static/media/{{team.img}}" style="width:50%" onclick="onClick(this)">
             <div class="w3-row">
                 <div class="w3-col l6">

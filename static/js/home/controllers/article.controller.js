@@ -13,11 +13,11 @@
         $scope.mainMenu = false;
         var articleId = $routeParams.id - 1;
 
-        $http.get("/articles/all")
+        $http.get("/articles/id/"+articleId)
             .then(function (response) {
-                $scope.articles = response.data;
+                $scope.articles = response.data[0];
                 console.log($scope.articles)
-                $scope.article = $scope.articles[articleId];
+                $scope.article = $scope.articles;
                 $scope.safeContent = $sce.trustAsHtml($scope.article.content)
             });
 
