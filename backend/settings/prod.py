@@ -2,6 +2,8 @@ from .common import *
 
 DEBUG = False
 
+MEDIA_ROOT = os.path.join(BASE_DIR, '/var/www/virtual/nmoeller/tt.vfl-winz-baak.de/static/media')
+
 ALLOWED_HOSTS = ['tt-vfl-winz-baak.de', "vfl-winz-baak.de", "127.0.0.1","tt.vfl-winz-baak.de"]
 
 STATIC_URL = '/static/'

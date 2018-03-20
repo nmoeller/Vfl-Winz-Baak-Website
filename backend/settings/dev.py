@@ -2,6 +2,8 @@ from .common import *
 
 DEBUG = True
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+
 ALLOWED_HOSTS = ['*']
 
 # Static files (CSS, JavaScript, Images)

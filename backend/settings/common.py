@@ -121,7 +121,7 @@ USE_TZ = True
 ####################################
 #  CKEDITOR CONFIGURATION
 ####################################
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+
 
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
 

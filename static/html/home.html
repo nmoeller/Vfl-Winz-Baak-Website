@@ -191,7 +191,8 @@ Mit Roboter- und Balleimertraining sowie von Videoanalysen bringen wir Euch das 
         <div class="w3-row w3-padding-48">
             <div ng-repeat="person in ansprechpartner | limitTo : 4" class="w3-col l3">
                 <img class="w3-hover-shadow" ng-if="person.img" src="static/media/{{person.img}}" style="width:250px;cursor:pointer" onclick="onClick(this)">
-                <p>{{person.first_name}} {{person.last_name}}</p>
+                <h2>{{person.first_name}} {{person.last_name}}</h2>
+                 <p>{{person.role[0].name}}</p>
                 <div style="width:300px;margin: auto;font-size: 13px;" data-aos="zoom-in" data-aos-delay="500">
                     <div class="w3-row">
                         <div class="w3-col l4 foo"><i class="fa fa-phone fa-3x w3-text-white "></i>

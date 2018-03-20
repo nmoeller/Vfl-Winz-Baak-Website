@@ -5,9 +5,14 @@
         .module('website.routes')
         .config(config);
 
-    config.$inject = ['$routeProvider'];
+    config.$inject = ['$routeProvider','$locationProvider'];
 
-    function config($routeProvider) {
+    function config($routeProvider,$locationProvider) {
+        $locationProvider.html5Mode({
+       enabled: true,
+       requireBase: false
+});
+        
         $routeProvider
             .when('/home', {
                 controller: "HomepageController",
