@@ -38,7 +38,7 @@
                 $scope.teams[team].tabelle = $sce.trustAsHtml(response.data);
                 console.log($scope.teams)
             }
-        })}
+        )}
                   
 
 
