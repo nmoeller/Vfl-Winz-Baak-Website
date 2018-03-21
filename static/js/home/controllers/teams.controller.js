@@ -31,11 +31,13 @@
         function getTable(team)
         {
             var name = $scope.teams[team].webttFileName
+            if(name){
             $http.get("/webtt/html/"+name+".html")
             .then(function (response) {
                 console.log(response)
-                $scope.teams[team].tabelle = $sce.trustAsHtml(response);
+                $scope.teams[team].tabelle = $sce.trustAsHtml(response.data);
                 console.log($scope.teams)
+            }
         })}
                   
 
