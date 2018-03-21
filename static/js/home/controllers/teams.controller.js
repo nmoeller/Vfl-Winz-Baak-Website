@@ -31,8 +31,9 @@
         function getTable(team)
         {
             var name = $scope.teams[team].webttFileName
-            $http.get("/webtt/html/tabelle_"+name+".html")
+            $http.get("/webtt/html/"+name+".html")
             .then(function (response) {
+                console.log(response)
                 $scope.teams[team].tabelle = $sce.trustAsHtml(response);
                 console.log($scope.teams)
         })}
