@@ -43,6 +43,7 @@
 
 
     }
+    }
 
     angular
         .module('website.teams.controllers').filter('position', function ($filter) {
