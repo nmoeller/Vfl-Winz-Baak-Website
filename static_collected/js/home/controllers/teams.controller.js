@@ -35,13 +35,14 @@
             $http.get("/webtt/html/"+name+".html")
             .then(function (response) {
                 console.log(response)
-                $scope.teams[team].tabelle = $sce.trustAsHtml(response.data);
+                $scope.teams[team].tabelle = $sce.trustAsHtml($(response.data).find('table').html());
                 console.log($scope.teams)
             }
         )}
                   
 
 
+    }
     }
 
     angular
