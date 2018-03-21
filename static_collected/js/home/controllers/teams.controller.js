@@ -30,12 +30,9 @@
         
         function getTable(team)
         {
-            var name = $scope.teams[team].name.replace(/\s/g, '');
+            var name = $scope.teams[team].webttFileName
             $http.get("/webtt/html/tabelle_"+name+".html")
             .then(function (response) {
-                var site = $(response);
-                var table = site.find("table").html();
-                console.log(table);
                 $scope.teams[team].tabelle = $sce.trustAsHtml(response);
                 console.log($scope.teams)
         })}
