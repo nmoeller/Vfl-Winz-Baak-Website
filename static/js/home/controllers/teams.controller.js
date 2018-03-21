@@ -5,9 +5,9 @@
         .module('website.teams.controllers')
         .controller('TeamsController', TeamsController);
 
-    TeamsController.$inject = ['$scope', '$http'];
+    TeamsController.$inject = ['$scope', '$http','$sce'];
 
-    function TeamsController($scope, $http) {
+    function TeamsController($scope, $http,$sce) {
 
         var self = this;
 
@@ -30,9 +30,13 @@
         
         function getTable(team)
         {
-            $http.get("/webtt/html/tabelle_"+$scope.teams[team].name+".html")
+            var name = $scope.teams[team].name.replace(/\s/g, '');
+            $http.get("/webtt/html/tabelle_"+name+".html")
             .then(function (response) {
-                $scope.teams[team].tabelle = response;
+                var site = $(response);
+                var table = site.find("table").html();
+                console.log(table);
+                $scope.teams[team].tabelle = $sce.trustAsHtml(response);
                 console.log($scope.teams)
         })}
                   
