@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <a href="/#!/article?id={{article.id}}">
-                    <button class="w3-button w3-circle w3-blue">more</button>
+                    <button class="w3-button w3-circle w3-blue">mehr</button>
                     </a>
 
                 </div>
@@ -45,7 +45,7 @@
 
         <div style="text-align:center" class="row">
             <a href="/#!/news">
-            <button class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Ältere Nachrichten</button>
+            <button class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Alte Nachrichten</button>
             </a>
         </div>
 
@@ -105,7 +105,7 @@
 
 <div id="aboutUs">
     <div class="w3-content w3-container w3-padding-64">
-        <h1 class="w3-center">Unsere Abteilung</h1>
+        <h1 class="w3-center">Über uns</h1>
         <hr class="blue" style="margin:auto">
 
         <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
@@ -189,8 +189,8 @@ Mit Roboter- und Balleimertraining sowie von Videoanalysen bringen wir Euch das 
 <h1 class="section-heading">So kannst du Kontakt mit uns aufnehmen</h1>
         <hr class="light" style="margin:auto">
         <div class="w3-row w3-padding-48">
-            <div ng-repeat="person in ansprechpartner | limitTo : 4" class="w3-col l3">
-                <img class="w3-hover-shadow" ng-if="person.img" src="static/media/{{person.img}}" style="width:250px;cursor:pointer" onclick="onClick(this)">
+            <a href="mailto:{{person.email}}" ng-repeat="person in ansprechpartner | limitTo : 4" class="w3-col l3" style="text-decoration:none">
+                <img class="w3-hover-shadow" ng-if="person.img" src="static/media/{{person.img}}" style="width:250px;cursor:pointer">
                 <h2>{{person.first_name}} {{person.last_name}}</h2>
                  <p>{{person.role[0].name}}</p>
                 <div style="width:300px;margin: auto;font-size: 13px;" data-aos="zoom-in" data-aos-delay="500">
@@ -212,11 +212,11 @@ Mit Roboter- und Balleimertraining sowie von Videoanalysen bringen wir Euch das 
 
                     </div>
                 </div>
-            </div>
+            </a>
 
         </div>
 
-    <div style="text-align:center" class="row"><a href="/#!/contact" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Contact us</a></div>
+    <!--<div style="text-align:center" class="row"><a href="/#!/contact" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Contact us</a></div>-->
 
 </div>
 

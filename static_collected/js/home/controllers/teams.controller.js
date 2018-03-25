@@ -35,7 +35,7 @@
             $http.get("/webtt/html/"+name+".html")
             .then(function (response) {
                 console.log(response)
-                $scope.teams[team].tabelle = $sce.trustAsHtml($(response.data).find('table').html());
+                $scope.teams[team].tabelle = $sce.trustAsHtml($(response.data).find('table')[0].outerHTML);
                 console.log($scope.teams)
             }
         )}
