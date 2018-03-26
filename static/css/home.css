@@ -92,13 +92,13 @@ html {
 /* First image (Logo. Full height) */
 
 .bgimg-1 {
-    background-image: url('http://www.ltv-lippstadt-tt.de/wp-content/uploads/2015/10/076A3660.jpg');
+    background-image: url('/static/images/slider.jpg');
     min-height: 1200px;
 }
 
 @media only screen and (max-width: 1024px) {
     .bgimg-1 {
-        background-image: url('http://www.ltv-lippstadt-tt.de/wp-content/uploads/2015/10/076A3660.jpg');
+        background-image: url('/static/images/slider.jpg');
         min-height: 800px;
     }
 }
@@ -106,7 +106,7 @@ html {
 /* Second image (Portfolio) */
 
 .bgimg-2 {
-    background-image: url("/static/images/slider1.png");
+    background-image: url("/static/images/slider1.jpg");
     min-height: 400px;
 }
 
@@ -118,7 +118,7 @@ html {
 }
 
 .bgimg-4 {
-    background-image: url("/static/images/slider2.png");
+    background-image: url("/static/images/slider2.jpg");
     min-height: 400px;
 }
 
