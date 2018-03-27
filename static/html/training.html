@@ -30,7 +30,7 @@
 
 
                <div class="w3-row w3-padding-48">
-            <div ng-repeat="person in trainer | limitTo : 4" class="w3-col l3">
+            <a href="mailto:{{person.email}}" ng-repeat="person in trainer | limitTo : 4" class="w3-col l3" style="text-decoration:none">
                 <img class="w3-hover-shadow" ng-if="person.img" src="static/media/{{person.img}}" style="width:250px;cursor:pointer" onclick="onClick(this)">
                 <p>{{person.first_name}} {{person.last_name}}</p>
                 <div style="width:300px;margin: auto;font-size: 13px;" data-aos="zoom-in" data-aos-delay="500">
@@ -52,7 +52,7 @@
 
                     </div>
                 </div>
-            </div>
+            </a>
 
         </div>
     </div>
