@@ -15,7 +15,7 @@
         $http.get("/players/trainer")
             .then(function (response) {
                 $scope.trainer= response.data;
-                console.log($scope.trainer)
+                
             });
 
     }

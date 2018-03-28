@@ -30,7 +30,7 @@
         $http.get("/teams/all")
             .then(function (response) {
                 self.teams = response.data;
-                console.log(self.teams)
+               
             });
 
 
