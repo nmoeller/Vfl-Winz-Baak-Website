@@ -14,19 +14,19 @@
         $http.get("/articles/all")
             .then(function (response) {
                 $scope.articles = response.data;
-                console.log($scope.articles)
+             
             });
 
         $http.get("/marquee/latest")
             .then(function (response) {
                 $scope.marquee = response.data.text;
-                console.log($scope.marquee)
+              
             });
         
                $http.get("/players/ansprechpartner")
             .then(function (response) {
                 $scope.ansprechpartner= response.data;
-                console.log($scope.ansprechpartner)
+               
             });
 
     }

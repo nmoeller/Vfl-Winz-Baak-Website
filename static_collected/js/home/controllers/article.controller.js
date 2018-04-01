@@ -16,7 +16,7 @@
         $http.get("/articles/id/"+articleId)
             .then(function (response) {
                 $scope.articles = response.data[0];
-                console.log($scope.articles)
+                
                 $scope.article = $scope.articles;
                 $scope.safeContent = $sce.trustAsHtml($scope.article.content)
             });

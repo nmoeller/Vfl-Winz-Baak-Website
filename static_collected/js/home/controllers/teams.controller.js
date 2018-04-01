@@ -25,7 +25,7 @@
         $http.get("/players/all")
             .then(function (response) {
                 $scope.players = response.data;
-                console.log($scope.players)
+                
             });
         
         function getTable(team)
@@ -34,9 +34,9 @@
             if(name){
             $http.get("/webtt/html/"+name+".html")
             .then(function (response) {
-                console.log(response)
+                
                 $scope.teams[team].tabelle = $sce.trustAsHtml($(response.data).find('table')[0].outerHTML);
-                console.log($scope.teams)
+               
             }
         )}
                   
