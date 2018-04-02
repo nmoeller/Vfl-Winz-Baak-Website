@@ -5,6 +5,8 @@ from django.contrib import admin
 from .views import HomeView
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+
+
 urlpatterns = [
     path('admin', admin.site.urls),
     url(r'^articles/', include('apps.articles.urls')),
@@ -14,6 +16,7 @@ urlpatterns = [
     url(r'^players/', include('apps.teams.urls_players')),
     url('.*$', HomeView.as_view(), name="home"),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+   
 ]
 
 urlpatterns += staticfiles_urlpatterns()

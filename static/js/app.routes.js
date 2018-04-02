@@ -31,10 +31,7 @@
                 controllerAs: "ctrl",
                 templateUrl: "/static/html/news.html"
             }).when('/article', {
-                title: 'VfL Winz Baak Artikel',
                 robots: 'index, follow',
-                description: 'Tischtennis, Kindertraining, Jugendtraining, Anfängertraining, Leistungstraining, Wettkampf,Mädchen, Jungen, Mannschaften, Mannschaftssport, Ballroboter, Ballmaschine, qualifizierte Übungsleiter und Trainer, Coaching im Training und im Wettkampf, Turniere, Spaß, Vereinsleben, VfL Winz-Baak, Weihnachtsfeiern, Bochum, Linden, Dahlhausen, Hattingen, Essen,Witten, André Engelmann, Jens Neumeier, schnell, Ping-Pong, NRW-Liga, Landesliga, Bezirksliga, Bezirksklasse, Kreisliga, Kreisklasse',
-                canonical: 'https://tt.vfl-winz-baak.de/article',
                 controller: "ArticleController",
                 controllerAs: "ctrl",
                 templateUrl: "/static/html/article.html"
