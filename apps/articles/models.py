@@ -12,5 +12,4 @@ class Article(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def get_absolute_url(self):
-        return str('/article?id='+self.id.__str__())
+   

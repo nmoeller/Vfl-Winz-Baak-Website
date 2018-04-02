@@ -10,3 +10,7 @@ class ArticleSitemap(Sitemap):
  
     def lastmod(self, item): 
        return item.updated_at
+
+    def location(self, item):
+         return '/article?id='+item.id.__str__()
+

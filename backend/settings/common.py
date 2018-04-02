@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
+    'django.contrib.sites',
     "rest_framework",
     "compressor",
     'ckeditor',
@@ -43,6 +44,8 @@ INSTALLED_APPS = [
     "apps.teams",
     "apps.send_email"
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
