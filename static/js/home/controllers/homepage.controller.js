@@ -17,11 +17,7 @@
              
             });
 
-        $http.get("/marquee/latest")
-            .then(function (response) {
-                $scope.marquee = response.data.text;
-              
-            });
+    
         
                $http.get("/players/ansprechpartner")
             .then(function (response) {

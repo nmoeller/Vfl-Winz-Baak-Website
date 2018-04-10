@@ -93,13 +93,13 @@ html {
 
 .bgimg-1 {
     background-image: url('/static/images/slider.jpg');
-    min-height: 1200px;
+    min-height: 100%;
 }
 
 @media only screen and (max-width: 1024px) {
     .bgimg-1 {
         background-image: url('/static/images/slider.jpg');
-        min-height: 800px;
+        min-height:100%;
     }
 }
 

@@ -13,25 +13,25 @@
 
         $scope.$on('$routeChangeSuccess', function (event, current) {
             if ($location.path() == "/home") {
-                $scope.mainMenu = true
-                $scope.teamMenu = false
-            } else if ($location.path() == "/teams") {
-                $scope.teamMenu = true
-                $scope.mainMenu = false
+                $scope.mainSite = true
+
+
             } else {
-                $scope.mainMenu = false
-                $scope.teamMenu = false
+                $scope.mainSite = false
             }
+            
 
         });
 
-
-
-        $http.get("/teams/all")
+        $http.get("/marquee/latest")
             .then(function (response) {
-                self.teams = response.data;
-               
+                $scope.marquee = response.data.text;
+
             });
+
+
+
+
 
 
 
