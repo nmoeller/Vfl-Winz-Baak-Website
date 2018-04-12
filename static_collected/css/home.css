@@ -99,7 +99,20 @@ html {
 @media only screen and (max-width: 1024px) {
     .bgimg-1 {
         background-image: url('/static/images/slider.jpg');
-        min-height:100%;
+        min-height: 100%;
+        background-attachment: scroll;
+    }
+    .bgimg-2 {
+        display: none;
+    }
+
+    /* Third image (Contact) */
+    .bgimg-3 {
+        display: none;
+    }
+
+    .bgimg-4 {
+        display: none;
     }
 }
 
