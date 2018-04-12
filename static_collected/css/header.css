@@ -35,6 +35,14 @@
     .imgonsmall {
         width: 50px !important;
     }
+    
+}
+
+@media only screen and (max-width: 370px) {
+    
+    #menuTitle{
+        font-size:12px
+    }
 }
 
 #return-to-top {
