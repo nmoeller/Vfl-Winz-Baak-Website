@@ -12,7 +12,7 @@
             <div class="w3-col l4 m4" ng-repeat="article in articles | orderBy : id : true | limitTo : 3 " itemscope itemtype="http://schema.org/Article">
                 <div class="w3-card-4 w3-white w3-margin " data-aos="zoom-in-up" style="height:500px">
                     <div style="height:400px">
-                        <img class="w3-hover-shadow" ng-if="article.img" src="static/media/{{article.img}}" style="width:100%;cursor:pointer" onclick="onClick(this)">
+                        <img class="w3-hover-shadow" ng-if="article.img" src="static/media/{{article.img}}" style="width:100%;cursor:pointer;height: 220px" onclick="onClick(this)">
                         <div class="w3-container w3-center" style="height:200px">
                             <h2 itemprop="name">{{article.title}}</h2>
                         </div>
