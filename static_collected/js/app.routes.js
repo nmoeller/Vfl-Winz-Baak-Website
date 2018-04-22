@@ -77,9 +77,9 @@
                 templateUrl: "/static/html/sportliches.html",
                 controller: "SportsController",
                 controllerAs: "ctrl"
-            }).when('/contact', {
-                templateUrl: "/static/html/contact.html",
-                controller: "ContactController",
+            }).when('/links', {
+                templateUrl: "/static/html/links.html",
+                controller: "LinkController",
                 controllerAs: "ctrl"
             })
             .otherwise("/home")
