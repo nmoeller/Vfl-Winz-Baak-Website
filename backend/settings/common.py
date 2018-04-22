@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "apps.articles",
     "apps.marquee",
     "apps.teams",
+    "apps.links",
     "apps.send_email"
 ]
 
