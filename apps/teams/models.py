@@ -6,6 +6,7 @@ class Team(models.Model):
     name = models.CharField(max_length=200)
     league = models.CharField(max_length=200)
     link = models.CharField(max_length=200)
+    teilnehmer = models.CharField(max_length=200)
     img = models.ImageField(blank=True, null=True, upload_to="team_imgs")
     webttFileName = models.CharField(blank=True, null=True,max_length=200)
 

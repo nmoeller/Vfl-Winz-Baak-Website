@@ -5,7 +5,7 @@
             <h1 class="section-heading">weiterführende Links</h1>
             <hr class="light" style="margin:auto">
             <div class=" w3-container w3-padding-64">
-            <div ng-repeat="link in links">
+            <div ng-repeat="link in links | orderBy:'text'">
                 <a target=blank href="{{link.link}}">{{link.text}}</a>
             
             </div>

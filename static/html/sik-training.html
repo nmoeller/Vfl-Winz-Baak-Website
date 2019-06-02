@@ -1,0 +1,144 @@
+<div class="w3-animate-opacity">
+    <div style="background: #e4e4e4;">
+        <div class=" w3-container w3-padding-64 w3-center w3-content">
+
+
+            <h1 class="section-heading">Unser Trainingsangebot an Euch</h1>
+            <hr class="blue" style="margin:auto" />
+
+
+            <div class="w3-row w3-margins">
+                <h3 class="text-center">3 verschiedene Trainingstage zur Auswahl</h3>
+                <p style="text-align:center">Ihr könnt also trainieren, wenn es Euer Zeitplan hergibt.</p>
+                <h3 class="text-center">freies Spielen ist außerhalb der regulären Trainingszeiten möglich</h3>
+                <p style="text-align:center">Das Training ist grundsätzlich in 4 Gruppen eingeteilt. Im Jugend-/Schülerbereich haben wir 2 Leistungsgruppen und eine Einstreigergruppe. Bei den Erwachsenen gibt es aufgrund der engen Leistungsdichte eine große Trainingsgruppe.</p>
+                <h3 class="text-center">kurze Wartezeiten</h3>
+                <p style="text-align:center">Bei vier möglichen Trainingstagen entzerrt sich unsere große Trainingsgruppe und Ihr müsst nur zu den absoluten Spitzenzeiten auf einen freien Trainingstisch warten.</p>
+                <h3 class="text-center">verschiedene Trainingspartner</h3>
+                <p style="text-align:center">Viele verschiedene Trainingspartner aus allen Leistungsklassen. Wir haben derzeit 5 Nachwuchsteams und 5 Teams im Erwachsenenbereich. Da finden sich an jedem Trainingstag ausreichend Spielpartner.</p>
+                <h3 class="text-center">große Trainingsgruppen</h3>
+                <p style="text-align:center">Gemeinsames Training in großen Gruppen. 
+				Alle Jugendlichen bilden gemeinsam mit unseren älteren Spielern eine große Trainingsgruppe, 
+				die selbstverständlich auch unterschiedliche Leistungsstärken berücksichtigt. 
+				Unterteilungen nach Mannschaften oder Alter gibt es bei uns nicht. 
+				Das Nachwuchstraining wird natürlich von unserem Übungsleiterteam betreut und strukturiert, 
+				die Besseren werden mit gezieltem Training an mindestens 2 Tagen auf höhere Ligen vorbereitet,
+				die Erwachsenen trainieren frei ohne Übungsleiter.</p>
+            </div>
+            <div style="text-align:center" class="row"><a target="_blank" href="/static/images/Anmeldung.pdf" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Aufnahmeformular</a></div>
+        </div>
+    </div>
+    <div class=" w3-container w3-padding-64 w3-center w3-grey w3-text-white ">
+
+
+        <h1 class="section-heading">Trainer</h1>
+        <hr class="light" style="margin:auto" />
+
+
+               <div class="w3-row w3-padding-48">
+            <a href="mailto:{{person.email}}" ng-repeat="person in trainer | limitTo : 4" class="w3-col l3" style="text-decoration:none">
+                <img class="w3-hover-shadow" ng-if="person.img" src="static/media/{{person.img}}" style="width:250px;cursor:pointer" onclick="onClick(this)">
+                <p>{{person.first_name}} {{person.last_name}}</p>
+                <div style="width:300px;margin: auto;font-size: 13px;" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="w3-row">
+                        <div class="w3-col l4 foo"><i class="fa fa-phone fa-3x w3-text-white "></i>
+
+                        </div>
+                        <div class="w3-col l7 ">
+                            <p >{{person.phone}}</p>
+                        </div>
+                    </div>
+                    <div class="w3-row">
+                        <div class="w3-col l4 bar" ><i class="fa fa-envelope-o fa-3x w3-text-white "></i>
+                        </div>
+                        <div class="w3-col l7 ">
+                            <p>{{person.email}}</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>
+
+
+<div style="background: #e4e4e4;">
+    <div class=" w3-container w3-padding-64 w3-center  w3-text-black w3-content" id="second">
+
+
+        <h1 class="section-heading">Jugendarbeit</h1>
+        <hr class="blue" style="margin:auto" />
+
+
+        <div class="w3-row w3-margins">
+            <p class="lead">Ihr seid schon der Steinplattenchampion in der Schule? Ihr habt das letzte Rundlaufturnier locker gewonnen? Oder ihr könnt Tischtennis noch gar nicht so wirklich, findet den Sport aber einfach cool? Sauber! Dann herzlich Willkommen zum Schüler und Jugendtraining bei uns in Winz-Baak!</p>
+            <h3 class="text-center">So könnten bald Eure Nachmittage aussehen</h3>
+            <p style="text-align:center">Wenn Ihr ganz frisch dabei seid, nehmen sich unsere Trainer dienstags Zeit für Euch und führen euch im gezielten Einsteiger-Training an unsere bestehende Trainingsgruppe heran.</p>
+            <p style="text-align:center">Für die Fortgeschrittenen findet an den Montagen und Donnerstagen unser Leistungstraining statt.</p>
+            <p class="text-center">Unser großes Trainerteam bringt Euch mit Spielen und Übungen neben Grundtechniken und Feinheiten auch taktische Aspekte des Tischtennis bei.</p>
+            <h3 class="text-center">Ballroboter</h3>
+            <p style="text-align:center">Um eure Topspins und Schmetterbälle besser zu üben, zeigt Ihr an unserem Ballroboter was ihr schon könnt.</p>
+            <h3 class="text-center">Freies Training</h3>
+            <p class="text-center">Nachdem angeleiteten Training, fordert Ihr dann im freien Spiel oder auch beim Kaiserturnier eure Trainingspartner zu einem Match heraus. Dann könnt Ihr probieren und zeigen, was ihr gelernt habt.</p>
+            <h3 class="text-center">Training mit den "Profis"</h3>
+            <p style="text-align:center">Da nach dem Jugendtraining die Senioren trainieren, schnappt Ihr Euch kurz vor Ende einen von den "Großen" zu einem Trainingsspiel und schaut Euch noch schnell einige Tricks ab.|Wenn Ihr weit genug seid und schon mithalten könnt, seid Ihr natürlich auch herzlich eingeladen, einfach noch länger zu bleiben und bei den Großen mitzutrainieren.</p>
+        </div>
+
+        <div class="w3-row" style="width:400px;margin:auto">
+            <div class="w3-col l6">
+                <div style="text-align:center" class="w3-margin"><a href="/#!/aboutUs" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Sportliches</a></div>
+            </div>
+            <div class="w3-col l6">
+                <div style="text-align:center" class="w3-margin"><a href="/#!/aboutUs" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Vereinsleben</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" w3-container w3-padding-64 w3-center w3-white">
+
+        <h1 class="section-heading">und das sind unsere Trainingszeiten</h1>
+        <hr class="blue" style="margin:auto;margin-bottom:20px">
+
+        <div class="w3-row w3-margins">
+            <div style="margin-bottom: 60px;" class="w3-col l3"><i data-aos="zoom-in" data-aos-delay="500" class="fa fa-4x fa-check w3-text-blue"></i>
+				<h3>Montag<br>17:00 - 22:00 Uhr</h3>
+                <p class="text-muted">
+				Mehrzweckhalle Wagnerstraße<br>45529 Hattingen<hr>
+				Leistungstraining Gruppe 1<br>(17:00 - 19:00 Uhr)<hr>
+				Leistungstraining Gruppe 2<br>(17:00 - 19:00 Uhr)<hr>
+				freies Spielen für Einsteiger<br>(17:00 - 19:00 Uhr)<hr>
+				Herrentraining<br>(19:00 - 22:00 Uhr)</p>                
+            </div>
+            <div style="margin-bottom: 90px;" class="w3-col l3"><div data-aos="zoom-in" data-aos-delay="500" style="width:70px;margin: auto;" class="w3-center w3-text-blue"><img alt="self-Logo" src="/static/images/racket.svg"></div>
+                <h3>Dienstag<br>16:30 - 20:00 Uhr</h3>
+                <p class="text-muted">
+				Mehrzweckhalle Wagnerstraße<br>45529 Hattingen<hr>
+				Einsteiger-Training<br>(16:30 - 18:30 Uhr)<hr>
+				Leistungstraining Gruppe 1+2<br>(16:30 - 18:30 Uhr)<hr>
+				Leistungstraining Gruppe 1+2 in einer Hallenhälfte<br>(18:30 - 20:00 Uhr)<hr>
+				Herrentraining in einer Hallenhälfte<br>(18:30 - 20:00 Uhr)</p>
+				</p>
+            </div>
+            <div style="margin-bottom: 60px;" class="w3-col l3"><i data-aos-delay="500" data-aos="zoom-in" class="fa fa-4x fa-check w3-text-blue"></i>
+				<h3>Donnerstag<br>17:00 - 22:00 Uhr</h3>
+                <p class="text-muted">
+				Mehrzweckhalle Wagnerstraße<br>45529 Hattingen<hr>
+				Leistungstraining Gruppe 1<br>(17:00 - 19:00 Uhr)<hr>
+				Leistungstraining Gruppe 2<br>(17:00 - 19:00 Uhr)<hr>
+				freies Spielen für Einsteiger<br>(17:00 - 19:00 Uhr)<hr>
+				Herrentraining<br>(19:00 - 22:00 Uhr)</p>
+			</div>
+            <div style="margin-bottom: 60px;" class="w3-col l3">
+				<div data-aos="zoom-in" data-aos-delay="500" style="width:70px;margin: auto;" class="w3-center w3-text-blue"><img alt="self-Logo" src="/static/images/racket.svg"></div>			
+                <h3>Freitag<br>17:00 - 22:00 Uhr</h3>
+				<p class="text-muted">
+				Rauendahlstraße 40-42<br>45529 Hattingen<hr>
+				Trainingsmöglichkeit für alle!<br>nach individueller Absprache</p>
+            </div>
+        </div>
+        <p></p>
+       
+    </div>

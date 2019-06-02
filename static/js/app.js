@@ -5,7 +5,6 @@
         .module("website", [
             'website.routes',
             'website.homepage',
-            'website.contact',
             'duScroll'
             
         ]);
