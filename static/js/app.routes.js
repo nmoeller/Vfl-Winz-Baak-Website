@@ -81,10 +81,12 @@
                 templateUrl: "/static/html/links.html",
                 controller: "LinkController",
                 controllerAs: "ctrl"
+            }).when('/partner', {
+                templateUrl: "/static/html/partner.html",
+                controller: "PartnerController",
+                controllerAs: "ctrl"
             })
             .otherwise("/home")
-
-
     }
 
     angular

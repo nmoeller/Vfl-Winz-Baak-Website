@@ -15,6 +15,8 @@ urlpatterns = [
     url(r'^teams/', include('apps.teams.urls_teams')),
     url(r'^email/', include('apps.send_email.urls')),
     url(r'^players/', include('apps.teams.urls_players')),
+    url(r'^partner/', include('apps.partner.urls')),
+    url(r'^livescore/', include('apps.livescore.urls')),
     url('.*$', HomeView.as_view(), name="home"),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
    

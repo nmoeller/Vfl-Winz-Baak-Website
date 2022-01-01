@@ -1,0 +1,24 @@
+<div class="w3-animate-opacity">
+    <div class=" w3-container w3-padding-64 w3-center w3-center  w3-padding-64  dark" >
+
+        <div class="w3-content w3-padding-32 ">
+            <h1 class="section-heading">Partner</h1>
+            <hr class="light" style="margin:auto">
+                <div class=" w3-container w3-padding-64">
+                <div ng-repeat="partner in partners | orderBy:'text'">
+                    <h1>{{partner.title}}</h1>
+                    <img ng-if="partner.img" src="static/media/{{partner.img}}"></img>
+                    <div ng-bind-html="trustedHtml[$index]">
+
+                    </div>
+                </div>
+
+             
+            </div>
+         
+        </div>
+
+        <div style="text-align:center" class="row"><a href="/home" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Zurück zur Startseite</a></div>
+
+    </div>
+</div>

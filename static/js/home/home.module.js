@@ -10,6 +10,7 @@
             'website.menu.controllers',
             'website.sports.controllers',
             'website.training.controllers',
+            'website.partner.controllers',
         'website.link.controllers'
         ]);
 
@@ -35,5 +36,7 @@
         .module('website.training.controllers', [])
     angular
         .module('website.link.controllers', [])
+        angular
+        .module('website.partner.controllers', [])
 
 })();

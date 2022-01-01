@@ -149,12 +149,17 @@
             <li ng-repeat="team in teams| filter:{name:'Herren'}">
                 <a href="#mannschaft{{$index+1}}" du-smooth-scroll du-scrollspy duration="2000">{{team.name}}</a>
             </li>
-		<li ng-repeat="team in teams | filter:{name:'Jugend'}">
-                <a href="#youth{{$index+1}}" du-smooth-scroll du-scrollspy duration="2000">{{team.name}}</a>
+		<li ng-repeat="team in teams | filter:{name:'Jugend 18'}">
+                <a href="#youth18{{$index+1}}" du-smooth-scroll du-scrollspy duration="2000">{{team.name}}</a>
             </li>
-<li ng-repeat="team in teams | filter:{name:'Schüler'}">
-                <a href="#mini{{$index+1}}" du-smooth-scroll du-scrollspy duration="2000">{{team.name}}</a>
+		<li ng-repeat="team in teams | filter:{name:'Jugend 15'}">
+                <a href="#youth15{{$index+1}}" du-smooth-scroll du-scrollspy duration="2000">{{team.name}}</a>
             </li>
+		<li ng-repeat="team in teams | filter:{name:'Jugend 13'}">
+                <a href="#youth13{{$index+1}}" du-smooth-scroll du-scrollspy duration="2000">{{team.name}}</a>
+            </li>
+
+
 
 
         </ul>
@@ -170,7 +175,7 @@
             <div class="w3-row">
                 <div class="w3-col l6">
 				<div>
-                    <h2>Aufstellung</h2>
+                    <h2>die Mannschaft</h2>
                     <hr ng-class="($index%2==0) ? 'light' : 'blue'" style="margin:auto;margin-bottom:5px">
             <table>
             <tr> <th>Position</th><th>Vorname</th><th>Nachname</th><th>TTR</th>
@@ -186,7 +191,7 @@
             </tr> 
                  </table>
 				 <div ng-if="team.anzahl > team.teilnehmer">
-				 <h2>weitere Spieler</h2>
+				 <h2>Ergänzungsspieler</h2>
                     <hr ng-class="($index%2==0) ? 'light' : 'blue'" style="margin:auto;margin-bottom:5px">
 					<table>
             <tr> <th>Vorname</th><th>Nachname</th><th>TTR</th>
@@ -215,7 +220,7 @@
         <div style="text-align:center" class="row"><a href="{{team.link}}" target="_blank" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Spielplan</a></div>
 
     </div>
- <div ng-repeat="team in teams| filter:{name:'Jugend'}" id="youth{{$index+1}}" class=" w3-container w3-padding-64 w3-center " ng-class="($index%2==0) ? 'grey' : 'dark'">
+ <div ng-repeat="team in teams| filter:{name:'Jugend 18'}" id="youth18{{$index+1}}" class=" w3-container w3-padding-64 w3-center " ng-class="($index%2==0) ? 'grey' : 'dark'">
 
         <div class="w3-content w3-padding-16">
             <h1 class="section-heading">{{team.name}}</h1>
@@ -267,7 +272,7 @@
         <div style="text-align:center" class="row"><a href="{{team.link}}" target="_blank" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Spielplan</a></div>
 
     </div>
-     <div ng-repeat="team in teams| filter:{name:'Schüler'}" id="mini{{$index+1}}" class=" w3-container w3-padding-64 w3-center " ng-class="($index%2==0) ? 'grey' : 'dark'">
+     <div ng-repeat="team in teams| filter:{name:'Jugend 15'}" id="youth15{{$index+1}}" class=" w3-container w3-padding-64 w3-center " ng-class="($index%2==0) ? 'grey' : 'dark'">
 
         <div class="w3-content w3-padding-16">
             <h1 class="section-heading">{{team.name}}</h1>
@@ -319,6 +324,59 @@
         <div style="text-align:center" class="row"><a href="{{team.link}}" target="_blank" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Spielplan</a></div>
 
     </div>
+     <div ng-repeat="team in teams| filter:{name:'Jugend 13'}" id="youth13{{$index+1}}" class=" w3-container w3-padding-64 w3-center " ng-class="($index%2==0) ? 'grey' : 'dark'">
+
+        <div class="w3-content w3-padding-16">
+            <h1 class="section-heading">{{team.name}}</h1>
+            <hr ng-class="($index%2==0) ? 'blue' : 'light'" style="margin:auto;margin-bottom:20px">
+            <h5>{{team.league}}</h5>
+            <img src="static/media/{{team.img}}" style="width:50%" onclick="onClick(this)">
+            <div class="w3-row">
+                <div class="w3-col l6">
+                    <h2>Aufstellung</h2>
+                    <hr ng-class="($index%2==0) ? 'blue' : 'light'" style="margin:auto;margin-bottom:5px">
+            <table>
+            <tr> <th>Position</th><th>Vorname</th><th>Nachname</th><th>TTR</th>
+                
+                </tr>
+           
+            <tr ng-repeat="player in players | filter:team.name | position:team.name |limitTo : team.teilnehmer ">
+                <td>{{$index+1}}.</td>
+                <td>{{player.first_name}} </td>
+                <td> {{player.last_name}}</td>
+
+<td> {{player.TTR}}</td>
+            </tr> 
+                 </table><div ng-if="team.anzahl > team.teilnehmer">
+				 <h2>weitere Spieler</h2>
+                    <hr ng-class="($index%2==0) ? 'blue' : 'light'" style="margin:auto;margin-bottom:5px">
+					<table>
+            <tr> <th>Vorname</th><th>Nachname</th><th>TTR</th>
+                
+                </tr>
+           
+            <tr ng-repeat="player in players | filter:team.name | position:team.name " ng-show="player.positionYouth > team.teilnehmer ">
+               
+                <td>{{player.first_name}} </td>
+                <td> {{player.last_name}}</td>
+<td> {{player.TTR}}</td>
+            </tr> 
+                 </table>
+				 </div>
+                    </div>
+                 <div class="w3-col l6">
+                     <h2>Tabelle</h2>
+                    <hr ng-class="($index%2==0) ? 'blue' : 'light'" style="margin:auto;margin-bottom:5px">
+                     <div ng-bind-html="team.tabelle"></div>
+                </div>
+                </div>
+
+        </div>
+
+        <div style="text-align:center" class="row"><a href="{{team.link}}" target="_blank" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Spielplan</a></div>
+
+    </div>
+
 
 </div>
 

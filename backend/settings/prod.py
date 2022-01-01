@@ -4,7 +4,7 @@ DEBUG = False
 
 MEDIA_ROOT = os.path.join(BASE_DIR, '/var/www/virtual/nmoeller/tt.vfl-winz-baak.de/static/media')
 
-ALLOWED_HOSTS = ['tt-vfl-winz-baak.de', "vfl-winz-baak.de", "127.0.0.1","tt.vfl-winz-baak.de","0.0.0.0"]
+ALLOWED_HOSTS = ["*"]
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -22,8 +22,8 @@ STATICFILES_DIRS = [
 
 # COMPRESSOR
 COMPRESS_ROOT =  "/var/www/virtual/nmoeller/tt.vfl-winz-baak.de/static/"
-COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = True
+COMPRESS_ENABLED = False
+COMPRESS_OFFLINE = False
 
 # EMAIL VARS FOR PRODUCTION
 EMAIL_USE_TLS = True

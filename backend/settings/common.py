@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     "apps.marquee",
     "apps.teams",
     "apps.links",
-    "apps.send_email"
+    "apps.send_email",
+    "apps.partner",
+    "apps.livescore"
 ]
 
 SITE_ID = 1
