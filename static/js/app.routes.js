@@ -85,6 +85,10 @@
                 templateUrl: "/static/html/partner.html",
                 controller: "PartnerController",
                 controllerAs: "ctrl"
+            }).when('/livescore', {
+                templateUrl: "/static/html/livescore.html",
+                controller: "LiveScoreController",
+                controllerAs: "ctrl"
             })
             .otherwise("/home")
     }

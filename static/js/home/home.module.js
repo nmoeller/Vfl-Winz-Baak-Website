@@ -11,6 +11,7 @@
             'website.sports.controllers',
             'website.training.controllers',
             'website.partner.controllers',
+            'website.livescore.controllers',
         'website.link.controllers'
         ]);
 
@@ -36,7 +37,9 @@
         .module('website.training.controllers', [])
     angular
         .module('website.link.controllers', [])
-        angular
+    angular
         .module('website.partner.controllers', [])
+    angular
+        .module('website.livescore.controllers', [])
 
 })();
