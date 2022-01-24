@@ -29,6 +29,20 @@
 
             });
 
+            var fetchLivescore = () => {
+                $http.get("/livescore/all")
+                    .then(function (response) {
+                        $scope.livescores = response.data;
+                        $scope.livescores = $scope.livescores.map((element) => {
+                            element["latestupdate"] = Date.now() - Date.parse(element.updated_at)
+                            return element})
+                        console.log($scope.livescores)
+                        setTimeout(()=>fetchLivescore(),20000)
+                    });
+            }
+    
+            fetchLivescore()
+
 
 
 
