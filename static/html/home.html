@@ -13,11 +13,11 @@
 		
         <div class="w3-row" data-aos="zoom-in" data-aos-delay="200">
             <div class="w3-col l4 m4" ng-repeat="article in articles | orderBy : id : true | limitTo : 3 " itemscope itemtype="http://schema.org/Article">
-                <div class="w3-card-4 w3-white w3-margin " data-aos="zoom-in-up" style="height:500px">
-                    <div style="height:400px">
+                <div class="w3-card-4 w3-white w3-margin " data-aos="zoom-in-up" style="height:400px">
+                    <div>
                         <img class="w3-hover-shadow" ng-if="article.img" src="static/media/{{article.img}}" style="width:100%;cursor:pointer;height: 220px" onclick="onClick(this)">
-                        <div class="w3-container w3-center" style="height:200px">
-                            <h2 itemprop="name">{{article.title}}</h2>
+                        <div class="w3-container w3-center">
+                            <h4 itemprop="name">{{article.title}}</h2>
                         </div>
                         
                     </div>
@@ -173,7 +173,7 @@ Mit Roboter- und Balleimertraining sowie von Videoanalysen bringen wir Euch das 
 <div id="training">
     <div class=" w3-container w3-padding-64 w3-center">
 
-        <h1 class="section-heading">und das sind unsere Trainingszeiten</h1>
+        <h1 class="section-heading">Trainingszeiten</h1>
         <hr class="blue" style="margin:auto;margin-bottom:20px">
 
         <div class="w3-row w3-margins">
@@ -208,11 +208,7 @@ Mit Roboter- und Balleimertraining sowie von Videoanalysen bringen wir Euch das 
 					Rauendahlstraße 40-42<br>45529 Hattingen<hr>
 					eingeladene Jugendspieler (13/15/18)<br>(17:00 - 19:00 Uhr)<hr>
 					Damen-/Herren (Wieder-)Einsteigertraining<br>(17:00 - 19:00 Uhr)<hr>
-					freies Training für alle<br>(19:00 - 21:45 Uhr)</p>
-					Sollten an einem Freitag Meisterschaftsspiele stattfinden, findet das Training nur bis 18:30 Uhr statt.<br>
-					An welchen Freitagen Spiele stattfinden, könnt Ihr hier einsehen:<br>
-					<a href="https://tt.vfl-winz-baak.de/tools/spielplan/winzbaak.pdf" target="_blank" class="w3-button w3-blue w3-round-xxlarge w3-padding-large w3-hover-shadow w3-hover-blue">Spielplan</a>
-						
+					freies Training für alle<br>(19:00 - 21:45 Uhr)</p>		
 				</p>
             </div>
         </div>
@@ -227,7 +223,7 @@ Mit Roboter- und Balleimertraining sowie von Videoanalysen bringen wir Euch das 
     </div>
 </div>
 <div class=" w3-container w3-padding-64 w3-center w3-center  w3-padding-64  dark" id="contact">
-<h1 class="section-heading">So kannst du Kontakt mit uns aufnehmen</h1>
+<h1 class="section-heading">Kontakt</h1>
         <hr class="light" style="margin:auto">
         <div class="w3-row w3-padding-48">
             <a href="mailto:{{person.email}}" ng-repeat="person in ansprechpartner | limitTo : 4" class="w3-col l3" style="text-decoration:none">

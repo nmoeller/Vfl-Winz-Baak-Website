@@ -70,7 +70,7 @@ font-size: 60px !important;">VfL Winz Baak e.V. 1912</h1>
     border-radius: 50px;">
                     <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" style="font-weight:bold">{{marquee}}</marquee>
                 </div>
-                <div ng-if="livescores" style="background: rgba(0, 0, 0, 0.5);border-radius: 15px;width: 220px;margin: auto;margin-top: 5px;">
+                <div ng-if="livescores" style="background: rgba(0, 0, 0, 0.5);border-radius: 15px;margin: auto;margin-top: 5px;display: inline-block;">
                     <div class="w3-content" ng-repeat="livescore in livescores | orderBy:'text'">
                         <div ng-if="livescore.latestupdate < 54000000">
                             <div class=" w3-container">

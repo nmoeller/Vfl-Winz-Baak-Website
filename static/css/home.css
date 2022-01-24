@@ -36,6 +36,7 @@
     height: 10px;
     border-radius: 100%;
     background-color: red;
+    margin-right: 7px;
 }
 
 .livescore_container{
@@ -126,8 +127,8 @@ html {
 .bgimg-2,
 .bgimg-3,
 .bgimg-4 {
-    /*background-attachment: fixed;*/
-    background-position: center;
+    background-attachment: fixed;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
 }
